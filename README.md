@@ -129,6 +129,7 @@ For Admin access with relevant sign-in information: [My Cookbook Admin]()
   * [Codebeautify.org](https://codebeautify.org/python-formatter-beautifier) - for formatting the code.
   * [Code Insitute PEP8 Validator](https://pep8ci.herokuapp.com/#) - for validating the Python code.
   * [Shields.io](https://shields.io/) for adding badges to the readme.
+  * [Django Secret Key Generator](https://djecrety.ir/) - for generating a secret key
 
 ##  Deployment & Local Development    
   
