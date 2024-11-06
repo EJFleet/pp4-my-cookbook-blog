@@ -17,6 +17,9 @@ class Recipe(models.Model):
     posted_date = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
+    servings = models.IntegerField(
+        null=False, blank=False, default=4, help_text='Enter how many people your recipes serves.'
+    )
     ingredients = models.TextField(max_length=10000, null=False, blank=False, default='Ingredients needed')
     method = models.TextField(max_length=10000, null=False, blank=False, default='Method needed')
     featured_image = CloudinaryField('image', default='placeholder')
