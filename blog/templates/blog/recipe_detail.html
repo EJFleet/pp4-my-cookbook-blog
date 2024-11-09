@@ -12,7 +12,7 @@
                 <p class="post-subtitle">By {{ recipe.author }} | {{ recipe.posted_date|date:"M j, Y"}}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <img src="{% static 'images/recipe-default-image.png' %}" class="scale" alt="placeholder">
+                <img src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }}" class="scale">
             </div>
         </div>
     </div>
