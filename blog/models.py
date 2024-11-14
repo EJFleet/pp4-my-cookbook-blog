@@ -23,7 +23,7 @@ class Recipe(models.Model):
     ingredients = models.TextField(max_length=10000, null=False, blank=False, default='Ingredients needed')
     method = models.TextField(max_length=10000, null=False, blank=False, default='Method needed')
     featured_image = CloudinaryField('image', default='https://res.cloudinary.com/dbtrgpmbu/image/upload/v1731179066/recipe-default-image_tmh79i.png')
-    
+
     class Meta:
         ordering = ['-posted_date']
 

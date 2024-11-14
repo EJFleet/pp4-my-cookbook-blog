@@ -1,16 +1,27 @@
+from django.db.models import Q
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
+from django.views.generic import CreateView
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from django.utils.text import slugify
 from .models import Recipe, Comment
-from .forms import CommentForm
+from .forms import CommentForm, RecipeForm
 
 # Create your views here.
 
 class RecipeList(generic.ListView):
-    queryset = Recipe.objects.filter(status=1)
     template_name = 'blog/index.html'
     paginate_by = 6
+
+    def get_queryset(self):
+        user = self.request.user
+        if user.is_authenticated:
+            # Show published recipes and drafts authored by the logged-in user
+            return Recipe.objects.filter(Q(status=1) | Q(author=user))
+        else:
+            # Show only published recipes for unauthenticated users
+            return Recipe.objects.filter(status=1)
 
 
 def recipe_detail(request, slug):
@@ -55,6 +66,34 @@ def recipe_detail(request, slug):
         "comment_form" : comment_form,
         },
     )
+
+
+class AddRecipe(CreateView):
+    """ Add recipe view """
+    template_name = "blog/add_recipe.html"
+    model = Recipe
+    form_class = RecipeForm
+
+    def form_valid(self, form):
+        # Automatically generate a unique slug for the recipe
+        form.instance.author = self.request.user
+        # Determine if the recipe is a draft or published based on the button clicked
+        if self.request.POST.get('action') == 'draft':
+            form.instance.status = 0  # Draft
+        else:
+            form.instance.status = 1  # Published
+
+        if not form.instance.slug:
+            form.instance.slug = slugify(form.instance.title)
+        
+        return super(AddRecipe, self).form_valid(form)
+
+    def get_success_url(self):
+        # Redirect to the detail page of the newly created recipe if status is 'published'
+        if self.object.status == 1:
+            return reverse('recipe_detail', kwargs={'slug': self.object.slug})
+        else: # draft
+            return reverse('home') #redirect to the recipe list
 
 def comment_edit(request, slug, comment_id):
     """
