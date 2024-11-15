@@ -14,7 +14,7 @@
                     <div class="card {% if not recipe.status == 1 and recipe.author == user %} opacity-50 {% elif not recipe.status == 1 %} d-none {% endif %} mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                <img src="{{ recipe.featured_image.url }}" alt="Click to view {{ recipe.title }}" class="img-fluid">
+                                <img src="{{ recipe.featured_image }}" alt="Click to view {{ recipe.title }}" class="img-fluid">
                             </div>
                             {% if recipe.slug %}
                             <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link">
