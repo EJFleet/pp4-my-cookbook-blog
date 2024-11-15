@@ -1,27 +1,32 @@
 from django.db.models import Q
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
-from django.views.generic import CreateView
+from django.views.generic import CreateView, DeleteView
 from django.contrib import messages
+from django.contrib.auth.mixins import (UserPassesTestMixin, LoginRequiredMixin)
 from django.http import HttpResponseRedirect
 from django.utils.text import slugify
 from .models import Recipe, Comment
 from .forms import CommentForm, RecipeForm
 
-# Create your views here.
+
+def get_recipe_queryset(user):
+    """
+    Return a queryset for recipes visible to the given user.
+    """
+    if user.is_authenticated:
+        # Include published recipes and drafts authored by the user
+        return Recipe.objects.filter(Q(status=1) | Q(author=user))
+    else:
+        # Include only published recipes for unauthenticated users
+        return Recipe.objects.filter(status=1)
 
 class RecipeList(generic.ListView):
     template_name = 'blog/index.html'
     paginate_by = 6
 
     def get_queryset(self):
-        user = self.request.user
-        if user.is_authenticated:
-            # Show published recipes and drafts authored by the logged-in user
-            return Recipe.objects.filter(Q(status=1) | Q(author=user))
-        else:
-            # Show only published recipes for unauthenticated users
-            return Recipe.objects.filter(status=1)
+        return get_recipe_queryset(self.request.user)
 
 
 def recipe_detail(request, slug):
@@ -38,7 +43,7 @@ def recipe_detail(request, slug):
     :template:`blog/recipe_detail.html`
     """
 
-    queryset = Recipe.objects.filter(status=1)
+    queryset = get_recipe_queryset(request.user)
     recipe = get_object_or_404(queryset, slug=slug)
     comments = recipe.recipe_comments.all().order_by("-created_on")
     comment_count = recipe.recipe_comments.filter(approved=True).count()
@@ -94,6 +99,17 @@ class AddRecipe(CreateView):
             return reverse('recipe_detail', kwargs={'slug': self.object.slug})
         else: # draft
             return reverse('home') #redirect to the recipe list
+
+class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """ Delete a recipe """
+
+    model = Recipe
+    template_name = "blog/recipe_confirm_delete.html"
+    success_url = '/'
+
+    def test_func(self):
+        recipe = self.get_object()
+        return self.request.user == recipe.author
 
 def comment_edit(request, slug, comment_id):
     """
