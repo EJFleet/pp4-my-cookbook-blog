@@ -1,7 +1,7 @@
 from django.db.models import Q
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
-from django.views.generic import CreateView, DeleteView
+from django.views.generic import CreateView, DeleteView, UpdateView
 from django.contrib import messages
 from django.contrib.auth.mixins import (UserPassesTestMixin, LoginRequiredMixin)
 from django.http import HttpResponseRedirect
@@ -79,8 +79,7 @@ class AddRecipe(CreateView):
     model = Recipe
     form_class = RecipeForm
 
-    def form_valid(self, form):
-        # Automatically generate a unique slug for the recipe
+    def form_valid(self, form):        
         form.instance.author = self.request.user
         # Determine if the recipe is a draft or published based on the button clicked
         if self.request.POST.get('action') == 'draft':
@@ -88,6 +87,7 @@ class AddRecipe(CreateView):
         else:
             form.instance.status = 1  # Published
 
+        # Automatically generate a unique slug for the recipe
         if not form.instance.slug:
             form.instance.slug = slugify(form.instance.title)
         
@@ -99,6 +99,37 @@ class AddRecipe(CreateView):
             return reverse('recipe_detail', kwargs={'slug': self.object.slug})
         else: # draft
             return reverse('home') #redirect to the recipe list
+
+
+class EditRecipe(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    """ Update a recipe """
+    template_name = 'blog/edit_recipe.html'
+    model = Recipe
+    form_class = RecipeForm
+
+    def test_func(self):
+        recipe = self.get_object()
+        return self.request.user == recipe.author
+    
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+
+        # Determine if the recipe should be a draft or published
+        if self.request.POST.get('action') == 'draft':
+            form.instance.status = 0  # Draft
+        elif self.request.POST.get('action') == 'publish':
+            form.instance.status = 1  # Published
+
+        return super(EditRecipe, self).form_valid(form)
+
+    def get_success_url(self):
+        # Redirect to the detail page of the newly created recipe if status is 'published'
+        if self.object.status == 1:
+            return reverse('recipe_detail', kwargs={'slug': self.object.slug})
+        else: # draft
+            return reverse('home') #redirect to the recipe list
+
+
 
 class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """ Delete a recipe """
