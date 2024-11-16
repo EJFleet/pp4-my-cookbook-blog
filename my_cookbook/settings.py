@@ -152,6 +152,20 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
+SUMMERNOTE_CONFIG = {
+    
+    'summernote': {
+        # Toolbar customization
+        # https://summernote.org/deep-dive/#custom-toolbar-popover
+
+        'toolbar': [
+            ['font', ['bold', 'underline',]],
+            ['para', ['ul', 'ol',]],
+            ['insert', ['link', 'picture', 'video']],
+        ],
+    }
+}
+
 # Cloudinary settings
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
