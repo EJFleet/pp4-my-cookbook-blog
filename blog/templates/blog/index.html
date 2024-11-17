@@ -9,19 +9,20 @@
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
-                {% for recipe  in recipe_list %}
+                {% for recipe in recipe_list %}
                 <div class="col-md-4">
-                    <div class="card {% if not recipe.status == 1 and recipe.author == user %} opacity-50 {% elif not recipe.status == 1 %} d-none {% endif %} mb-4">
-                        <div class="card-body">
+                    <div class="card mb-4">
+                        <div
+                            class="card-body {% if recipe.status == 0 and recipe.author == user %} author-draft-image {% elif recipe.status != 1 %} nonauthor-draft-image {% endif %}">
                             <div class="image-container">
                                 {% if "placeholder" in recipe.featured_image.url %}
                                 <img class="card-img-top" src="{% static 'images/default.png' %}"
-                                  alt="placeholder image">
+                                    alt="placeholder image">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ recipe.featured_image.url }}"
-                                  alt="{{ recipe.title }}">
+                                    alt="{{ recipe.title }}">
                                 {% endif %}
-                              </div>
+                            </div>
                             {% if recipe.slug %}
                             <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link">
                                 <h2 class="card-title">{{ recipe.title }}</h2>
@@ -31,9 +32,9 @@
                                 {% endif %}
                             </a>
                             {% else %}
-                                <h2 class="card-title">{{ recipe.title }}</h2>
-                                <p class="card-text">{{ recipe.description }}</p>
-                                <p class="text-danger">No details available for this recipe.</p>
+                            <h2 class="card-title">{{ recipe.title }}</h2>
+                            <p class="card-text">{{ recipe.description }}</p>
+                            <p class="text-danger">No details available for this recipe.</p>
                             {% endif %}
                             <hr />
                             <p class="card-text text-muted h6">{{ recipe.posted_date|date:"M j, Y"}}
@@ -41,7 +42,7 @@
                         </div>
                     </div>
                 </div>
-                    
+
                 {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">
