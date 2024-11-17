@@ -26,7 +26,7 @@
                                 </div>
                                 {% if recipe.slug %}
 
-                                <h2 class="card-title">{{ recipe.title }}</h2>
+                                <h2 class="card-title text-capitalize">{{ recipe.title }}</h2>
                                 <p class="card-text">{{ recipe.description }}</p>
                                 {% if recipe.author == user %}
                                 <p>Status: {% if recipe.status == 1 %}Published{% else %}Draft{% endif %}</p>
