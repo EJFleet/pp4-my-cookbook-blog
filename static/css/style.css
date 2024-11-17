@@ -30,6 +30,18 @@ body {
     background-color: transparent;
 }
 
+.card-title {
+    height: 5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-text {
+    height: 6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .image-container {
     position: relative;
 }

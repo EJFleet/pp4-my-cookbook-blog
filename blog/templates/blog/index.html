@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <div class="row">
 
-        <!-- Blog Entries Column -->
+        <!-- Recipe Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for recipe in recipe_list %}
@@ -14,39 +14,40 @@
                     <div class="card mb-4">
                         <div
                             class="card-body {% if recipe.status == 0 and recipe.author == user %} author-draft-image {% elif recipe.status != 1 %} nonauthor-draft-image {% endif %}">
-                            <div class="image-container">
-                                {% if "placeholder" in recipe.featured_image.url %}
-                                <img class="card-img-top" src="{% static 'images/default.png' %}"
-                                    alt="placeholder image">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ recipe.featured_image.url }}"
-                                    alt="{{ recipe.title }}">
-                                {% endif %}
-                            </div>
-                            {% if recipe.slug %}
                             <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link">
+                                <div class="image-container">
+                                    {% if "placeholder" in recipe.featured_image.url %}
+                                    <img class="card-img-top" src="{% static 'images/default.png' %}"
+                                        alt="placeholder image">
+                                    {% else %}
+                                    <img class="card-img-top" src=" {{ recipe.featured_image.url }}"
+                                        alt="{{ recipe.title }}">
+                                    {% endif %}
+                                </div>
+                                {% if recipe.slug %}
+
                                 <h2 class="card-title">{{ recipe.title }}</h2>
                                 <p class="card-text">{{ recipe.description }}</p>
                                 {% if recipe.author == user %}
                                 <p>Status: {% if recipe.status == 1 %}Published{% else %}Draft{% endif %}</p>
                                 {% endif %}
+                                {% else %}
+                                <h2 class="card-title">{{ recipe.title }}</h2>
+                                <p class="card-text">{{ recipe.description }}</p>
+                                <p class="text-danger">No details available for this recipe.</p>
+                                {% endif %}
+                                <hr />
+                                <p class="card-text text-muted h6">{{ recipe.posted_date|date:"M j, Y"}}
+                                </p>
                             </a>
-                            {% else %}
-                            <h2 class="card-title">{{ recipe.title }}</h2>
-                            <p class="card-text">{{ recipe.description }}</p>
-                            <p class="text-danger">No details available for this recipe.</p>
-                            {% endif %}
-                            <hr />
-                            <p class="card-text text-muted h6">{{ recipe.posted_date|date:"M j, Y"}}
-                            </p>
                         </div>
                     </div>
                 </div>
 
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
-                {% endif %}
+                <!-- {% if forloop.counter|divisibleby:3 %}
+                </div>
+                <div class="row">
+                    {% endif %} -->
                 {% endfor %}
 
             </div>
