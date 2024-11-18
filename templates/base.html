@@ -66,11 +66,20 @@
                             href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
-
                 </ul>
-                <span class="navbar-text text-muted">
+
+                <!-- Slogan -->
+                <div class="navbar-text text-muted">
                     Recipes for Everyday Living
-                </span>
+                </div>
+
+                <!-- Search Bar -->
+                <form class="d-flex" role="search" method="GET" action="{% url 'home' %}">
+                    <input class="form-control me-2" name='q' type="search" placeholder="Search recipes" aria-label="Search">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+
+
             </div>
         </div>
     </nav>

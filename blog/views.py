@@ -24,9 +24,22 @@ def get_recipe_queryset(user):
 class RecipeList(generic.ListView):
     template_name = 'blog/index.html'
     paginate_by = 6
+    model = Recipe
 
-    def get_queryset(self):
-        return get_recipe_queryset(self.request.user)
+    def get_queryset(self, **kwargs):
+        query = self.request.GET.get('q')
+        if query:
+            recipes = self.model.objects.filter(
+                Q(title__icontains=query) | 
+                Q(description__icontains=query) |
+                Q(ingredients__icontains=query) |
+                Q(method__icontains=query)
+            )
+
+        else:
+            recipes = self.model.objects.all()
+
+        return recipes
 
 
 def recipe_detail(request, slug):
