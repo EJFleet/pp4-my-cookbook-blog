@@ -1,3 +1,10 @@
+:root {
+    --darkgreen: darkgreen;
+    --white: #fff;
+    --grey: #4A4A4F;
+    --brightgreen: limegreen;
+}
+
 body {
     background-color: #F9FAFC;
     font-family: 'Roboto', sans-serif;
@@ -25,7 +32,7 @@ p {
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: var(--darkgreen);
 }
 
 .main-bg {
@@ -94,25 +101,27 @@ p {
 }
 
 .recipe-subtitle {
-    margin-left: 5%;
-    color: lightgray;
+    color: var(--grey);
 }
 
 
 .btn-signup,
-.btn-edit {
-    background-color: #188181;
-    color: #fff;
+.btn-edit,
+.btn-search {
+    background-color: var(--darkgreen);
+    color: var(--white);
 }
 
 .btn-signup:hover,
-.btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
+.btn-signup:active,
+.btn-search:hover,
+.btn-search:active {
+    background-color:var(--white);
+    color: var(--darkgreen);
 }
 
 .link {
-    color: #23BBBB;
+    color: var(--brightgreen);
     text-decoration: none;
 }
 
