@@ -26,13 +26,10 @@
                                 </div>
                                 {% if recipe.slug %}
                                 <h2 class="card-title text-capitalize">{{ recipe.title }}</h2>
-                                <p class="card-text">{{ recipe.description }}</p>
-                                <!-- {% if recipe.author == user %}
-                                <p>Status: {% if recipe.status == 1 %}Published{% else %}Draft{% endif %}</p>
-                                {% endif %} -->
+                                <p class="card-text">{{ recipe.description|truncatechars:250 }}</p>
                                 {% else %}
                                 <h2 class="card-title">{{ recipe.title }}</h2>
-                                <p class="card-text">{{ recipe.description }}</p>
+                                <p class="card-text">{{ recipe.description|truncatechars:250 }}</p>
                                 <p class="text-danger">No details available for this recipe.</p>
                                 {% endif %}
                                 <hr />
@@ -43,11 +40,8 @@
                     </div>
                 </div>
 
-                <!-- {% if forloop.counter|divisibleby:3 %}
-                </div>
-                <div class="row">
-                    {% endif %} -->
-                {% endfor %}
+               
+            {% endfor %}
 
             </div>
         </div>
