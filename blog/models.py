@@ -34,7 +34,7 @@ class Recipe(models.Model):
 class Comment(models.Model):
 
     """
-    A model to allow users to create and manage comments
+    Allow users to create and manage comments
     """
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="recipe_comments")
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_comments")
