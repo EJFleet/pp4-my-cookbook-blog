@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h1>hello is this working</h1>
+{% for member in owner %}
+<h1>{{ member.name }}</h1>
+{% endfor %}
+{% for member in team %}
+<h1>{{ member.name }}</h1>
+{% endfor %}
+{% endblock %}
