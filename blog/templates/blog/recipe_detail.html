@@ -29,8 +29,8 @@
                     </div>
                     {% if request.user == recipe.author %}
                     <div class="text-center">
-                        <a href="{% url 'edit_recipe' recipe.slug %}" class="btn btn-primary">Edit</a>
-                        <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-primary">Delete</a>
+                        <a href="{% url 'edit_recipe' recipe.slug %}" class="btn btn-primary btn-edit">Edit</a>
+                        <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-primary btn-delete">Delete</a>
                     </div>
                     {% endif %}
                 </div>
@@ -90,8 +90,8 @@
                     </p>
                     {% endif %}
                     {% if user.is_authenticated and comment.author == user %}
-                    <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
                     <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                    <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
                     {% endif %}
                 </div>
                 <!-- Our for loop ends here -->
