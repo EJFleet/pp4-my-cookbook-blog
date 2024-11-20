@@ -14,18 +14,12 @@ class TeamMemberList(ListView):
     paginate_by = 6
     context_object_name = 'team_members'
 
-    def get_queryset(self):
-
-        return {
-            'owner': TeamMember.objects.filter(status=1),
-            'team': TeamMember.objects.filter(status=0),
-    }
-
     def get_context_data(self, **kwargs):
 
         """        
         Add the owner and team members to the context.        
         """
         context = super().get_context_data(**kwargs)
-        context.update(self.get_queryset())
+        context['owner'] = TeamMember.objects.filter(status=1),
+        context['team'] = TeamMember.objects.filter(status=0),
         return context
