@@ -9,7 +9,7 @@ class TeamMember(models.Model):
     """
     name = models.CharField(max_length=30, null=False, blank=False)
     bio = models.TextField(max_length=1000, null=False, blank=False, default="A wonderul team member!")
-    jobtitle = models.CharField(max_length=50)
+    jobtitle = models.CharField(max_length=50, verbose_name='Job Title')
     location = models.CharField(max_length=60)
     headshot = CloudinaryField('image', default='placeholder')
 
@@ -18,6 +18,3 @@ class TeamMember(models.Model):
 
     def __str__(self):
         return self.name
-
-    def latest_recipe(self):
-        return self.recipes.order_by('-posted_date').first()
