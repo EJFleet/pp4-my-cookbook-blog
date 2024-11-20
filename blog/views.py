@@ -13,6 +13,8 @@ from .forms import CommentForm, RecipeForm
 def get_recipe_queryset(user):
     """
     Return a queryset for recipes visible to the given user.
+    Authenticated users see published recipes and their own draft recipes.
+    Unauthenticated users only see published recipes.
     """
     if user.is_authenticated:
         # Include published recipes and drafts authored by the user
@@ -22,14 +24,23 @@ def get_recipe_queryset(user):
         return Recipe.objects.filter(status=1)
 
 class RecipeList(generic.ListView):
+
+    """
+    Display a list of recipes.
+    Filter recipes based on user's search query if provided.
+    """
+    model = Recipe
     template_name = 'blog/index.html'
     paginate_by = 6
-    model = Recipe
 
-    def get_queryset(self, **kwargs):
+    def get_queryset(self):
+        """
+        Get the list of recipes to display.
+        Incorporates user-specific filtering and search functionality.
+        """
         query = self.request.GET.get('q')
         if query:
-            recipes = self.model.objects.filter(
+            recipes = Recipe.objects.filter(
                 Q(title__icontains=query) | 
                 Q(description__icontains=query) |
                 Q(ingredients__icontains=query) |
@@ -37,9 +48,15 @@ class RecipeList(generic.ListView):
             )
 
         else:
-            recipes = self.model.objects.all()
+            recipes = Recipe.objects.all()
 
         return recipes
+
+    #Stack Overflow
+    def get_context_data(self, **kwargs):
+        context = super(RecipeList, self).get_context_data(**kwargs)
+        context['query'] = self.request.GET.get('q')
+        return context
 
 
 def recipe_detail(request, slug):

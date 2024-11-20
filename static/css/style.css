@@ -66,11 +66,11 @@ p {
     object-fit: cover;
 }
 
-.author-draft-image {
+.author-draft {
     opacity: 50%;
 }
 
-.nonauthor-draft-image {
+.nonauthor-draft {
     display: none;
 }
 
