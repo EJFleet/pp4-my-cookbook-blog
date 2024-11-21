@@ -40,16 +40,19 @@ class RecipeList(generic.ListView):
         Incorporates user-specific filtering and search functionality.
         """
         query = self.request.GET.get('q')
+
+        if self.request.user.is_staff:
+            recipes = Recipe.objects.all()
+        else:
+            recipes = Recipe.objects.filter(status=1)
+
         if query:
-            recipes = Recipe.objects.filter(
+            recipes = recipes.filter(
                 Q(title__icontains=query) | 
                 Q(description__icontains=query) |
                 Q(ingredients__icontains=query) |
                 Q(method__icontains=query)
             )
-
-        else:
-            recipes = Recipe.objects.all()
 
         return recipes
     
@@ -77,12 +80,21 @@ def recipe_detail(request, slug):
     :template:`blog/recipe_detail.html`
     """
 
-    queryset = get_recipe_queryset(request.user)
+    if request.user.is_authenticated and (request.user.is_staff or Recipe.objects.filter(slug=slug, author=request.user).exists()):
+        queryset = Recipe.objects.all()
+    else:
+        queryset = Recipe.objects.filter(status=1) 
+        
     recipe = get_object_or_404(queryset, slug=slug)
     comments = recipe.recipe_comments.all().order_by("-created_on")
     comment_count = recipe.recipe_comments.filter(approved=True).count()
 
     if request.method == "POST":
+        if not request.user.is_authenticated:
+            return redirect(
+                reverse('login')
+            )
+
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)

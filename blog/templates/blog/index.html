@@ -13,7 +13,7 @@
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div
-                            class="card-body {% if recipe.status == 0 and recipe.author == user %} author-draft {% elif recipe.status != 1 %} nonauthor-draft {% endif %}">
+                            class="card-body {% if recipe.status == 0 and user.is_staff %} author-draft{% endif %}">
                             <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link">
                                 <div class="image-container">
                                     {% if "placeholder" in recipe.featured_image.url %}
