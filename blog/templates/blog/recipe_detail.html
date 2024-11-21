@@ -73,7 +73,7 @@
           to iterate through each comment in comments -->
                 {% for comment in comments %}
                 <div class="p-2 comments
-          {% if not comment.approved and comment.author == user %}
+          {% if not comment.approved and comment.author == user or user.is_staff %}
           faded{% elif not comment.approved %} d-none{% endif %}">
                     <p class="font-weight-bold">
                         {{ comment.author }}
@@ -89,8 +89,10 @@
                         This comment is awaiting approval
                     </p>
                     {% endif %}
-                    {% if user.is_authenticated and comment.author == user %}
+                    {% if user.is_authenticated and comment.author == user%}
                     <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                    {% endif %}
+                    {% if user.is_authenticated and comment.author == user or user.is_staff %}
                     <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
                     {% endif %}
                 </div>
