@@ -80,7 +80,7 @@ def recipe_detail(request, slug):
     :template:`blog/recipe_detail.html`
     """
 
-    if request.user.is_authenticated and (request.user.is_staff or Recipe.objects.filter(slug=slug, author=request.user).exists()):
+    if request.user.is_staff:
         queryset = Recipe.objects.all()
     else:
         queryset = Recipe.objects.filter(status=1) 
@@ -198,7 +198,7 @@ class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         recipe = self.get_object()
-        return self.request.user == recipe.author
+        return self.request.user.is_staff
     
     def get_context_data(self, **kwargs):
 
