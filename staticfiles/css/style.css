@@ -66,11 +66,11 @@ p {
     object-fit: cover;
 }
 
-.author-draft-image {
+.author-draft {
     opacity: 50%;
 }
 
-.nonauthor-draft-image {
+.nonauthor-draft {
     display: none;
 }
 
@@ -107,7 +107,8 @@ p {
 
 .btn-signup,
 .btn-edit,
-.btn-search {
+.btn-search,
+.btn-publish {
     background-color: var(--darkgreen);
     color: var(--white);
 }
@@ -115,7 +116,9 @@ p {
 .btn-signup:hover,
 .btn-signup:active,
 .btn-search:hover,
-.btn-search:active {
+.btn-search:active,
+.btn-publish:hover,
+.btn-publish:active {
     background-color:var(--white);
     color: var(--darkgreen);
 }
@@ -137,7 +140,8 @@ p {
     background: transparent;
 }
 
-.btn-delete {
+.btn-delete,
+.btn-danger {
     color: #fff;
     background: #E84610;
 }
