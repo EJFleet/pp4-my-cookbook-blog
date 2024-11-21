@@ -19,8 +19,8 @@ class TeamMemberList(ListView):
 
     def get_context_data(self, **kwargs):
 
-        """        
-        Add the owner and team members to the context.        
+        """
+        Add the owner and team members to the context.
         """
         context = super().get_context_data(**kwargs)
         context['owner'] = TeamMember.objects.filter(status=1)
