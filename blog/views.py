@@ -1,3 +1,4 @@
+from allauth.account.views import LoginView, LogoutView, SignupView
 from django.db.models import Q
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
@@ -51,11 +52,14 @@ class RecipeList(generic.ListView):
             recipes = Recipe.objects.all()
 
         return recipes
+    
 
     #Stack Overflow
     def get_context_data(self, **kwargs):
         context = super(RecipeList, self).get_context_data(**kwargs)
-        context['query'] = self.request.GET.get('q')
+        query = self.request.GET.get('q')
+        context['query'] = query
+        context['page_title'] = f"Search Results for '{query}'" if query else "Recipes"
         return context
 
 
@@ -91,14 +95,16 @@ def recipe_detail(request, slug):
             )
 
     comment_form = CommentForm()
+    page_title = recipe.title
 
     return render(
         request,
         "blog/recipe_detail.html",
-        {"recipe": recipe,
-        "comments": comments,
-        "comment_count": comment_count,
+        {"recipe" : recipe,
+        "comments" : comments,
+        "comment_count" : comment_count,
         "comment_form" : comment_form,
+        "page_title" : page_title,
         },
     )
 
@@ -129,6 +135,15 @@ class AddRecipe(CreateView):
             return reverse('recipe_detail', kwargs={'slug': self.object.slug})
         else: # draft
             return reverse('home') #redirect to the recipe list
+    
+    def get_context_data(self, **kwargs):
+
+        """        
+        Add the page title to the context.        
+        """
+        context = super().get_context_data(**kwargs)
+        context['page_title'] = 'Add Recipe'
+        return context
 
 
 class EditRecipe(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
@@ -158,6 +173,15 @@ class EditRecipe(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
             return reverse('recipe_detail', kwargs={'slug': self.object.slug})
         else: # draft
             return reverse('home') #redirect to the recipe list
+    
+    def get_context_data(self, **kwargs):
+
+        """        
+        Add the page title to the context.        
+        """
+        context = super().get_context_data(**kwargs)
+        context['page_title'] = 'Edit Recipe'
+        return context
 
 
 
@@ -171,6 +195,15 @@ class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     def test_func(self):
         recipe = self.get_object()
         return self.request.user == recipe.author
+    
+    def get_context_data(self, **kwargs):
+
+        """        
+        Add the page title to the context.        
+        """
+        context = super().get_context_data(**kwargs)
+        context['page_title'] = 'Delete Recipe?'
+        return context
 
 def comment_edit(request, slug, comment_id):
     """
@@ -210,3 +243,33 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+
+
+class MyCookbookLoginView(LoginView):
+    """
+    Login View with page title
+    """
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['page_title'] = "Login"
+        return context
+
+
+class MyCookbookLogoutView(LogoutView):
+    """
+    Logout View with page title
+    """
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['page_title'] = "Logout"
+        return context
+
+
+class MyCookbookSignupView(SignupView):
+    """
+    Signup View with page title
+    """
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['page_title'] = "Register"
+        return context

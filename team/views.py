@@ -25,4 +25,5 @@ class TeamMemberList(ListView):
         context = super().get_context_data(**kwargs)
         context['owner'] = TeamMember.objects.filter(status=1)
         context['team'] = TeamMember.objects.filter(status=0)
+        context['page_title'] = 'Meet the Team'
         return context
