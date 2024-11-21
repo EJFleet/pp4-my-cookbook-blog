@@ -10,7 +10,7 @@
         <form method="POST" class="text-center">
             {% csrf_token %}
             <p>Are you sure you want to delete "{{ recipe.title }}"?</p>
-            <input type="submit" value="Confirm" class="btn btn-primary w-25">
+            <input type="submit" value="Confirm" class="btn btn-primary w-25 btn-delete-recipe">
         </form>
     </div>
 </div>

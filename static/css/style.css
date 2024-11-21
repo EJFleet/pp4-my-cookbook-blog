@@ -1,12 +1,13 @@
 :root {
     --darkgreen: darkgreen;
-    --white: #fff;
+    --white: #F9FAFC;
     --grey: #4A4A4F;
     --brightgreen: limegreen;
+    --danger: #E84610;
 }
 
 body {
-    background-color: #F9FAFC;
+    background-color: var(--white);
     font-family: 'Roboto', sans-serif;
     font-size: medium;
 }
@@ -20,7 +21,7 @@ p {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #4A4A4F;
+    color: var(--grey);
 }
 
 .thin {
@@ -28,7 +29,7 @@ p {
 }
 
 .light-bg {
-    background-color: #fff;
+    background-color: var(--white);
 }
 
 .dark-bg {
@@ -36,7 +37,7 @@ p {
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: var(--white);
 }
 
 .card {
@@ -80,19 +81,19 @@ p {
 }
 
 .author {
-    color: white;
+    color: var(--white);
     margin: 4px;
     text-transform: uppercase;
 }
 
 .post-link {
     text-decoration: none;
-    color: #445261;
+    color: var(--grey);
 }
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: var(--danger);
 }
 
 .post-title {
@@ -115,6 +116,8 @@ p {
 
 .btn-signup:hover,
 .btn-signup:active,
+.btn-edit:hover,
+.btn-edit:active,
 .btn-search:hover,
 .btn-search:active,
 .btn-publish:hover,
@@ -130,25 +133,32 @@ p {
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: var(--grey);
     text-decoration: underline;
 }
 
 .btn-like {
-    color: #E84610;
+    color: var(--danger);
     border: none;
     background: transparent;
 }
 
+.btn-delete-recipe,
 .btn-delete,
 .btn-danger {
-    color: #fff;
-    background: #E84610;
+    color: var(--white);
+    background: var(--danger);
 }
 
 .btn-like:hover,
-.btn-like:active {
-    color: #E84610;
+.btn-like:active,
+.btn-delete-recipe:hover,
+.btn-delete-recipe:active,
+.btn-delete:hover,
+.btn-delete:active,
+.btn-danger:hover,
+.btn-danger:active {
+    color: var(--danger);
     background: transparent;
     border: none;
 }

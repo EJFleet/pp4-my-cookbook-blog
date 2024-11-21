@@ -109,32 +109,31 @@ def recipe_detail(request, slug):
     )
 
 
-class AddRecipe(CreateView):
+class AddRecipe(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     """ Add recipe view """
     template_name = "blog/add_recipe.html"
     model = Recipe
     form_class = RecipeForm
 
-    def form_valid(self, form):        
-        form.instance.author = self.request.user
-        # Determine if the recipe is a draft or published based on the button clicked
-        if self.request.POST.get('action') == 'draft':
-            form.instance.status = 0  # Draft
-        else:
-            form.instance.status = 1  # Published
+    def test_func(self):
+        return self.request.user.is_staff
+    
 
+    def form_valid(self, form):        
+        #Determine recipe status (draft or published) from button clicked
+        form.instance.status = 0 if self.request.POST.get('action') == 'draft' else 1
+        
         # Automatically generate a unique slug for the recipe
         if not form.instance.slug:
             form.instance.slug = slugify(form.instance.title)
         
-        return super(AddRecipe, self).form_valid(form)
+        return super().form_valid(form)
 
     def get_success_url(self):
-        # Redirect to the detail page of the newly created recipe if status is 'published'
+        #Redirect to appropriate page based on recipe status
         if self.object.status == 1:
             return reverse('recipe_detail', kwargs={'slug': self.object.slug})
-        else: # draft
-            return reverse('home') #redirect to the recipe list
+        return reverse('home') #redirect to the recipe list if saved as Draft
     
     def get_context_data(self, **kwargs):
 
