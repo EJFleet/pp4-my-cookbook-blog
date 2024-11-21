@@ -40,6 +40,10 @@ p {
     background-color: var(--white);
 }
 
+#slogan {
+    margin-right: 3rem;
+}
+
 .card {
     border: none;
     background-color: transparent;
