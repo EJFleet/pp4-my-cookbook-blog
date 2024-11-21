@@ -146,32 +146,25 @@ class AddRecipe(LoginRequiredMixin, UserPassesTestMixin, CreateView):
 
 
 class EditRecipe(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-    """ Update a recipe """
+    """ Allow staff to edit a recipe """
     template_name = 'blog/edit_recipe.html'
     model = Recipe
     form_class = RecipeForm
 
     def test_func(self):
-        recipe = self.get_object()
-        return self.request.user == recipe.author
+        return self.request.user.is_staff
     
     def form_valid(self, form):
         form.instance.author = self.request.user
-
         # Determine if the recipe should be a draft or published
-        if self.request.POST.get('action') == 'draft':
-            form.instance.status = 0  # Draft
-        elif self.request.POST.get('action') == 'publish':
-            form.instance.status = 1  # Published
-
-        return super(EditRecipe, self).form_valid(form)
+        form.instance.status = 0 if self.request.POST.get('action') == 'draft' else 1
+        return super().form_valid(form)
 
     def get_success_url(self):
         # Redirect to the detail page of the newly created recipe if status is 'published'
-        if self.object.status == 1:
-            return reverse('recipe_detail', kwargs={'slug': self.object.slug})
-        else: # draft
-            return reverse('home') #redirect to the recipe list
+        return reverse(
+            'recipe_detail', kwargs={'slug': self.object.slug}
+            ) if self.object.status == 1 else reverse('home') #redirect to the recipe list
     
     def get_context_data(self, **kwargs):
 

@@ -27,7 +27,7 @@
                     <div>
                         <p class="recipe-subtitle">By {{ recipe.author }} | {{ recipe.posted_date|date:"M j, Y"}}</p>
                     </div>
-                    {% if request.user == recipe.author %}
+                    {% if request.user.is_staff %}
                     <div class="text-center">
                         <a href="{% url 'edit_recipe' recipe.slug %}" class="btn btn-primary btn-edit">Edit</a>
                         <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-primary btn-delete-recipe">Delete</a>
