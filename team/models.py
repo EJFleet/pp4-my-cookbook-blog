@@ -3,12 +3,16 @@ from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Team Member"), (1, "Owner"))
 
+
 class TeamMember(models.Model):
     """
     Create profiles for team members
     """
     name = models.CharField(max_length=30, null=False, blank=False)
-    bio = models.TextField(max_length=1000, null=False, blank=False, default="A wonderul team member!")
+    bio = models.TextField(
+        max_length=1000, null=False, blank=False,
+        default="A wonderul team member!"
+        )
     jobtitle = models.CharField(max_length=50, verbose_name='Job Title')
     status = models.IntegerField(choices=STATUS, default=0)
     location = models.CharField(max_length=60)
