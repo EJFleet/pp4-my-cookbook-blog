@@ -126,6 +126,17 @@ p {
     color: var(--darkgreen);
 }
 
+.btn-home {
+    background-color: var(--darkgreen) !important; 
+    color: var(--white) !important;
+}
+
+.btn-home:hover,
+.btn-home:active {
+    background-color: var(--white) !important;
+    color: var(--darkgreen) !important;
+}
+
 .link {
     color: var(--brightgreen);
     text-decoration: none;
