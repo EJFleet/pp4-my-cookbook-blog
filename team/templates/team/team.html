@@ -8,7 +8,7 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for member in owner %}
-                <div class="col-md-4">
+                <div class="col-md-6 col-xl-4">
                     <div class="card mb-4">
                         <div class="card-body">
 
@@ -20,10 +20,10 @@
                                 <img class="card-img-top" src=" {{ member.headshot.url }}" alt="{{ member.name }}">
                                 {% endif %}
                             </div>
-                            <h2 class="card-title text-capitalize">{{ member.name }}</h2>
-                            <h3 class="card-text">{{ member.jobtitle }}</h3>
-                            <h4 class="card-text">Location: {{ member.location }}</h4>
-                            <p class="card-text">{{ member.bio }}</p>
+                            <h2 class="card-title team-card-title text-capitalize">{{ member.name }}</h2>
+                            <h3 class="card-text team-jobtitle">{{ member.jobtitle }}</h3>
+                            <h4 class="card-text team-location">{{ member.location }}</h4>
+                            <p class="card-text team-bio">{{ member.bio }}</p>
                             <hr />
 
                         </div>
@@ -31,7 +31,7 @@
                 </div>
                 {% endfor %}
                 {% for member in team %}
-                <div class="col-md-4">
+                <div class="col-md-6 col-xl-4">
                     <div class="card mb-4">
                         <div class="card-body">
 
@@ -43,10 +43,10 @@
                                 <img class="card-img-top" src=" {{ member.headshot.url }}" alt="{{ member.name }}">
                                 {% endif %}
                             </div>
-                            <h2 class="card-title text-capitalize">{{ member.name }}</h2>
-                            <h3 class="card-text">{{ member.jobtitle }}</h3>
-                            <h4 class="card-text">Location: {{ member.location }}</h4>
-                            <p class="card-text">{{ member.bio }}</p>
+                            <h2 class="card-title team-card-title text-capitalize">{{ member.name }}</h2>
+                            <h3 class="card-text team-jobtitle">{{ member.jobtitle }}</h3>
+                            <h4 class="card-text team-location">{{ member.location }}</h4>
+                            <p class="card-text team-bio">{{ member.bio }}</p>
                             <hr />
 
                         </div>

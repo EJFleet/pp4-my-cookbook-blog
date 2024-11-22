@@ -55,10 +55,29 @@ p {
     text-overflow: ellipsis;
 }
 
+.team-card-title {
+    height: 3rem;
+    padding-top: 1rem;
+}
+
 .card-text {
     height: 6rem;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.team-location {
+    height: 2rem;
+    color: var(--grey);
+}
+
+.team-bio {
+    height: 8rem;
+    overflow: auto;
+}
+
+.team-job-title {
+    height: 4rem;
 }
 
 .image-container {
@@ -98,11 +117,6 @@ p {
 .post-link:hover,
 .page-link {
     color: var(--danger);
-}
-
-.post-title {
-    margin-top: 10%;
-    margin-left: 5%;
 }
 
 .recipe-subtitle {
