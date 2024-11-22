@@ -8,14 +8,22 @@
     <form method="POST" enctype="multipart/form-data" class="p-2 form">
         <h1 class="text-center">Edit Recipe</h1>
         {% csrf_token %}
-        {{ form.media }}
-        {{ form|crispy}}
+
+        {{form.title|as_crispy_field}}
+
+        {{form.description|as_crispy_field}}
+
+        {{form.servings|as_crispy_field}}
+
+        {{form.ingredients|as_crispy_field}}
+
+        {{form.method|as_crispy_field}}
+
+        {{form.featured_image}}
         <div class="text-center">
             <button type="submit" name="action" value="publish" class="btn btn-primary btn-publish">Publish</button>
             <button type="submit" name="action" value="draft" class="btn btn-secondary">Save as Draft</button>
-
         </div>
     </form>
-
 </div>
 {% endblock %}
