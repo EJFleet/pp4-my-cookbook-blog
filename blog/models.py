@@ -32,11 +32,7 @@ class Recipe(models.Model):
         max_length=10000, null=False, blank=False, default='Method needed'
         )
     featured_image = CloudinaryField('image', default='placeholder')
-    team_member = models.ForeignKey(
-        TeamMember, on_delete=models.SET_NULL, null=True,
-        blank=True, related_name='recipes'
-        )
-
+    
     class Meta:
         ordering = ['-posted_date']
 

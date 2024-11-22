@@ -135,6 +135,8 @@ class AddRecipe(LoginRequiredMixin, UserPassesTestMixin, CreateView):
         return self.request.user.is_staff
 
     def form_valid(self, form):
+        # Assign the logged-in user as the author
+        form.instance.author = self.request.user        
         # Determine recipe status (draft or published) from button clicked
         form.instance.status = 0 if self.request.POST.get('action') == 'draft' else 1
 
@@ -170,7 +172,6 @@ class EditRecipe(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return self.request.user.is_staff
 
     def form_valid(self, form):
-        form.instance.author = self.request.user
         # Determine if the recipe should be a draft or published
         form.instance.status = 0 if self.request.POST.get('action') == 'draft' else 1
         return super().form_valid(form)
