@@ -4,12 +4,12 @@
 {% load crispy_forms_tags %}
 
 <div class="container">
-    <h1 class="text-capitalize">{{ recipe.title }}</h1>
+    <h1 class="text-capitalize recipe-title ms-2 mb-4">{{ recipe.title }}</h1>
     <section id="recipe">
         <div class="container">
             <div class="row">
                 <!--Recipe Image-->
-                <div class="col-md-6">
+                <div class="col-md-5 me-3">
                     {% if "placeholder" in recipe.featured_image.url %}
                     <img src="{% static 'images/default.png' %}" class="scale" alt="placeholder image">
                     {% else %}
@@ -17,18 +17,18 @@
                     {% endif %}
                 </div>
                 <!-- Recipe Details and Edit/Delete Buttons-->
-                <div class="col-md-6">
+                <div class="col-md-5 mt-3">
                     <div id="recipe-description">
                         {{ recipe.description }}
                     </div>
-                    <div id="recipe-servings">
+                    <div id="recipe-servings" class="mt-3">
                         <p>Serves {{ recipe.servings }}</p>
                     </div>
                     <div>
-                        <p class="recipe-subtitle">By {{ recipe.author }} | {{ recipe.posted_date|date:"M j, Y"}}</p>
+                        <p class="recipe-subtitle mt-3">By {{ recipe.author }} | {{ recipe.posted_date|date:"M j, Y"}}</p>
                     </div>
                     {% if request.user.is_staff %}
-                    <div class="text-center">
+                    <div class="text-center mt-3 p-3">
                         <a href="{% url 'edit_recipe' recipe.slug %}" class="btn btn-primary btn-edit">Edit</a>
                         <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-primary btn-delete-recipe">Delete</a>
                     </div>
@@ -37,14 +37,14 @@
             </div>
             <!--Ingredients and method-->
             <div class="row">
-                <div class="col-md-6">
-                    <h2>Ingredients</h2>
-                    <div id="ingredients">
+                <div class="col-md-5 me-3 mt-4">
+                    <h2 class="pb-3">Ingredients</h2>
+                    <div class="mt-3"  id="ingredients">
                         {{ recipe.ingredients|safe }}
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <h2>Method</h2>
+                <div class="col-md-5 mt-4" id="method">
+                    <h2 class="pb-3">Method</h2>
                     {{ recipe.method|safe }}
                 </div>
             </div>
@@ -55,9 +55,9 @@
 <div class="container">
     <!-- Displaying count of comments FROM CI -->
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 mt-4">
             <strong class="text-secondary">
-                <i class="far fa-comments"></i> {{ comment_count }}
+                <i class="far fa-comments ps-3"></i> {{ comment_count }}
             </strong>
         </div>
         <div class="col-12">
@@ -66,8 +66,8 @@
     </div>
     <!-- Displaying Comments FROM CI -->
     <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 ">
-            <h3>Comments:</h3>
+        <div class="col-md-5 me-3 mt-4 card ">
+            <h3 class="ps-4" >Comments:</h3>
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags
           to iterate through each comment in comments -->
@@ -81,7 +81,7 @@
                             {{ comment.created_on }}
                         </span> wrote:
                     </p>
-                    <div id="comment{{ comment.id }}">
+                    <div id="comment{{ comment.id }}" class="mb-3">
                         {{ comment.body | linebreaks }}
                     </div>
                     {% if not comment.approved and comment.author == user %}
@@ -101,7 +101,7 @@
             </div>
         </div>
         <!-- Creating New Comments FROM CI -->
-        <div class="col-md-4 card mb-4 mt-3">
+        <div class="col-md-4 card mb-4 mt-3 ps-4">
             <div class="card-body">
                 {% if user.is_authenticated %}
                 <h3>Leave a comment:</h3>

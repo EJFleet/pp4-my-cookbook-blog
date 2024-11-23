@@ -24,10 +24,6 @@ p {
     color: var(--grey);
 }
 
-.thin {
-    font-weight: 300;
-}
-
 .light-bg {
     background-color: var(--white);
 }
@@ -89,6 +85,11 @@ p {
     height: 20rem;
     object-fit: cover;
 }
+
+/* .recipe-title {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+} */
 
 .author-draft {
     opacity: 50%;
@@ -166,12 +167,6 @@ p {
     text-decoration: underline;
 }
 
-.btn-like {
-    color: var(--danger);
-    border: none;
-    background: transparent;
-}
-
 .btn-delete-recipe,
 .btn-delete,
 .btn-danger {
@@ -179,8 +174,6 @@ p {
     background: var(--danger);
 }
 
-.btn-like:hover,
-.btn-like:active,
 .btn-delete-recipe:hover,
 .btn-delete-recipe:active,
 .btn-delete:hover,
