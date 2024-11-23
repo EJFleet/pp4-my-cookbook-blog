@@ -4,9 +4,9 @@
 
 {% block content %}
 
-<div class="container">
-    <form method="POST" enctype="multipart/form-data" class="p-2 form">
-        <h1 class="text-center">Edit Recipe</h1>
+<div class="container d-flex justify-content-center">
+    <form method="POST" enctype="multipart/form-data" class="col-md-8 p-2 form">
+        <h1 class="text-center mb-4">Edit Recipe</h1>
         {% csrf_token %}
 
         {{form.title|as_crispy_field}}
@@ -20,7 +20,7 @@
         {{form.method|as_crispy_field}}
 
         {{form.featured_image}}
-        <div class="text-center">
+        <div class="text-center mt-3 mb-3">
             <button type="submit" name="action" value="publish" class="btn btn-primary btn-publish">Publish</button>
             <button type="submit" name="action" value="draft" class="btn btn-secondary">Save as Draft</button>
         </div>

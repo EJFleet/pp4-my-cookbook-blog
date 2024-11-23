@@ -164,6 +164,8 @@ SUMMERNOTE_CONFIG = {
             ['para', ['ul', 'ol',]],
             ['insert', ['link', 'picture', 'video']],
         ],
+
+        'width': '100%'
     }
 }
 
