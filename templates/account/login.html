@@ -8,19 +8,22 @@
 
 {% block content %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
+<div class="container-fluid mt-3">
+    <div class="row mx-2">
+        <div class="text-center mt-3">
+
             <h3>{% trans "Sign In" %}</h3>
 
-            <p>{% blocktrans %}Welcome back to the My Cookbook blog. To leave a comment or like a post, please log in. If
-                you
-                have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
+            <p class="mt-4 mb-4">{% blocktrans %}Welcome back to the My Cookbook blog. To leave a comment or like a
+                post, please log in.</p>
+            <p class="mt-4 mb-4">If you have not created an account yet, then <a class="link" href="{{ signup_url }}" aria-label="Go to the sign-up page">sign up</a>
                 first.{% endblocktrans %}</p>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
+
+    <div class="row mx-2">
+        <div class="text-center mt-3">
+
             <form class="login" method="POST" action="{% url 'account_login' %}">
                 {% csrf_token %}
                 {{ form.as_p }}
