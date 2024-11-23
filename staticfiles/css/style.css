@@ -24,10 +24,6 @@ p {
     color: var(--grey);
 }
 
-.thin {
-    font-weight: 300;
-}
-
 .light-bg {
     background-color: var(--white);
 }
@@ -55,10 +51,29 @@ p {
     text-overflow: ellipsis;
 }
 
+.team-card-title {
+    height: 3rem;
+    padding-top: 1rem;
+}
+
 .card-text {
     height: 6rem;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.team-location {
+    height: 2rem;
+    color: var(--grey);
+}
+
+.team-bio {
+    height: 8rem;
+    overflow: auto;
+}
+
+.team-job-title {
+    height: 4rem;
 }
 
 .image-container {
@@ -70,6 +85,11 @@ p {
     height: 20rem;
     object-fit: cover;
 }
+
+/* .recipe-title {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+} */
 
 .author-draft {
     opacity: 50%;
@@ -98,11 +118,6 @@ p {
 .post-link:hover,
 .page-link {
     color: var(--danger);
-}
-
-.post-title {
-    margin-top: 10%;
-    margin-left: 5%;
 }
 
 .recipe-subtitle {
@@ -152,12 +167,6 @@ p {
     text-decoration: underline;
 }
 
-.btn-like {
-    color: var(--danger);
-    border: none;
-    background: transparent;
-}
-
 .btn-delete-recipe,
 .btn-delete,
 .btn-danger {
@@ -165,8 +174,6 @@ p {
     background: var(--danger);
 }
 
-.btn-like:hover,
-.btn-like:active,
 .btn-delete-recipe:hover,
 .btn-delete-recipe:active,
 .btn-delete:hover,
