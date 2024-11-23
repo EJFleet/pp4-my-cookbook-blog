@@ -1,13 +1,22 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
-<h1>Action not allowed</h1>
+<div class="container-fluid mt-3">
+    <div class="row mx-2">
+        <div class="text-center mt-3">
 
-<div class="container text-center">
-    <h2>403 - Unauthorised Access</h2>
-    <p>You are not authorised to perform this action</p>
-    <a href="{% url 'home' %}" class="btn btn-primary btn-home">Go Back Home</a>
+            <h1>Action not allowed</h1>
+
+            <div class="container text-center">
+                <h2 class="mt-4">403 - Unauthorised Access</h2>
+                <p class="mt-4 mb-4">You are not authorised to perform this action</p>
+                <a href="{% url 'home' %}" class="btn btn-primary btn-home"
+                    aria-label="Back to the My Cookbook homepage">Go Back Home</a>
+            </div>
+            
+        </div>
+    </div>
 </div>
-
 {% endblock %}
