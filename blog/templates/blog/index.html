@@ -2,7 +2,6 @@
 {% load static %}
 {% block content %}
 
-<!-- index.html content starts here -->
 <div class="container-fluid">
     <div class="row">
 
@@ -10,7 +9,7 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for recipe in recipe_list %}
-                <div class="col-md-4">
+                <div class="col-md-6 col-lg-4 col-xl-3">
                     <div class="card mb-4">
                         <div
                             class="card-body {% if recipe.status == 0 and user.is_staff %} author-draft{% endif %}">
