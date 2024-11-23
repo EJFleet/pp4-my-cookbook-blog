@@ -35,7 +35,7 @@ class RecipeList(generic.ListView):
     """
     model = Recipe
     template_name = 'blog/index.html'
-    paginate_by = 6
+    paginate_by = 8
 
     def get_queryset(self):
         """
