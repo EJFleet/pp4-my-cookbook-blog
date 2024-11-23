@@ -1,5 +1,5 @@
 :root {
-    --darkgreen: darkgreen;
+    --darkgreen: #006400;
     --white: #F9FAFC;
     --grey: #4A4A4F;
     --brightgreen: limegreen;
@@ -168,7 +168,7 @@ p {
 }
 
 .btn-delete-recipe,
-.btn-delete,
+.btn-delete-comment,
 .btn-danger {
     color: var(--white);
     background: var(--danger);
@@ -176,8 +176,8 @@ p {
 
 .btn-delete-recipe:hover,
 .btn-delete-recipe:active,
-.btn-delete:hover,
-.btn-delete:active,
+.btn-delete-comment:hover,
+.btn-delete-comment:active,
 .btn-danger:hover,
 .btn-danger:active {
     color: var(--danger);
