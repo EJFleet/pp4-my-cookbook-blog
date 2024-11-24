@@ -192,3 +192,16 @@ p {
 .approval {
     color: rgb(222, 146, 168);
 }
+
+@media (min-width: 992px) and (max-width: 1045px) {
+    .card-title {
+        font-size: calc(1.2rem + .9vw);
+        height: 6.5rem;
+    }
+}
+
+@media (max-width: 1094px) {
+    #slogan {
+        display: none;
+    }
+}
