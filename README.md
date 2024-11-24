@@ -2,7 +2,7 @@
 
 ## Intro
 
-For my fourth portfolio project, I created a blog app to display recipes to a user. The user can log in and leave comments on each recipe and also view a page that displays the team members that work on the blog.
+For my fourth portfolio project, I created a blog app to display recipes to a user. My Cookbook is a recipe-sharing blog that allows users to browse, search, and interact with recipes. The app is designed for food enthusiasts who want to explore new recipes and connect with a community.
 
 ![My Cookbook responsive screenshot]()
 
@@ -19,41 +19,36 @@ For Admin access with relevant sign-in information: [My Cookbook Admin](https://
 
 ---
 
-## CONTENTS
-
-* [User Experience](#user-experience-ux)
+* [User Experience (UX)](#user-experience-ux)
   * [User Stories](#user-stories)
+  * [Design](#design)
+    * [Planning](#planning)
+    * [Imagery](#imagery)
 
-* [Project Management | Agile Methodologies](#project-management---agile-methodologies)
-  * [Themes, Epics, Stories & Tasks](#themes--epics--stories---tasks)
-  * [Estimation](#estimation)
-  * [Project Board](#project-board)
-  * [Labels](#labels)
-
-* [Design](#design)
-  * [Planning](#planning)
-  * [Imagery](#imagery)
- 
 * [Features](#features)
   * [Future Implementations](#future-implementations)
 
+* [Project Management & Agile Methodologies](#project-management--agile-methodologies)
+  * [Kanban Board](#kanban-board)
+  * [MoSCoW Prioritisation](#moscow-prioritisation)
+
 * [Technologies Used](#technologies-used)
-  * [Languages Used](#languages-used)
-  * [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
+  * [Languages](#languages)
+  * [Frameworks, Libraries & Packages](#frameworks-libraries--packages)
+  * [Tools](#tools)
 
 * [Deployment & Local Development](#deployment--local-development)
-  * [Creating a New Repository](#creating-a-new-repository)
   * [Deploying to Heroku](#deploying-to-heroku)
-  * [How to Fork](#forking-the-github-repository)
-  * [How to Clone](#clone-this-github-repository)
+  * [Forking the GitHub Repository](#forking-the-github-repository)
+  * [Cloning the GitHub Repository](#cloning-the-github-repository)
 
 * [Testing](#testing)
   * [Functionality](#functionality)
   * [Code Validation](#code-validation)
-  * [Solved Bugs](#solved-bugs)
+  * [Bug Fixes](#bug-fixes)
 
 * [Credits](#credits)
-  * [Code Used](#code-used)
+  * [Code Inspiration](#code-inspiration)
   * [Acknowledgments](#acknowledgments)
 
 ---
@@ -124,89 +119,116 @@ For Admin access with relevant sign-in information: [My Cookbook Admin](https://
   - edit a Team Member so that I can keep content relevant if someone's details change.
   - delete a Team Member so that I can keep content relevant if somebody leaves. 
 
-  
-  
 
+### Design
 
-    #### First-time Visitor Goals
+  #### Planning
 
-    I want to: 
-    * 
+  #### Colour Scheme
 
-    #### Returning/ Frequent Visitor Goals
+  #### Fonts
 
-    I want to: 
-    * 
-
-## Project Management | Agile Methodologies
-  
-  ### Themes, Epics, Stories & Tasks
-
-  ### Estimation
-
-  ### Project Board
-
-  ### Labels
-
-    #### Prioritization: MoSCoW
-
-
-## Design
-
-  ### Planning
-
-  ### Colour Scheme
-
-  ### Fonts
-
-  ### Imagery
+  #### Imagery
 
 
 ## Features
-
 
   ### Future Implementations
 
   I would add features that would allow the user to do the following:
   *
+  
+
+## Project Management & Agile Methodologies
+
+### Agile Development
+
+This project was developed using Agile methodology which allowed me to iteratively and incrementally build my app, with flexibility to make changes to my design throughout the entire development process.
+
+#### Kanban Board
+
+GitHub Issues and Projects were used to manage the development process. Each part of the app is divided into Epics which are broken down into User Stories with Tasks. An Epic represents a large body of work, such as a feature. The board view of the Project feature was used to display and manage my progress in the form of a 'kanban board'. The user stories were added to the 'Todo' column to be prioritised for development, moved to the 'In Progress' column to indicate development of the feature had begun and finally moved to the 'Done' column when the feature had been implemented and the acceptance criteria had been met.
+
+<details>
+
+  <summary> Kanban Board  </summary>
+
+  ![Kanban Board](docs/images/kanban-board-pp4.png)
+
+</details>
+
+[The Project Kanban Board](https://github.com/users/EJFleet/projects/2)
+
+#### MoSCoW Prioritisation
+
+User stories were prioritised using the MoSCoW prioritisation technique. Each user story was given one of the following labels:
+
+- Must have - to indicate the user story is guaranteed to be delivered.
+- Should have - to indicate the user story would add significant value but is not vital.
+- Could have - to indicate the user story would have a small impact if left out.
+- Won't have - to indicate the user story is not a priority in the current iteration.
+
 
 
 ## Technologies Used
 
 
-  ### Languages Used
+  ### Languages
 
-  The program was created with 
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-  ### Frameworks, Libraries & Programs Used
+  ### Frameworks, Libraries & Packages
 
-  * os - to add the clear_screen function to assist in creating a neater flow.
-  * sys - for exiting the program.
-  * Git - for version control.
-  * Github - to save and store the files for the website.
-  * Gitpod - for developing the site.
-  * Heroku - for deploying the app.
-  * ChatGPT - I used this when I needed answers to get unstuck and to help find bugs that I couldn't find myself.
-  * [Lucid.app](lucid.app) for creating the ERD.
-  * [Codebeautify.org](https://codebeautify.org/python-formatter-beautifier) - for formatting the code.
-  * [Code Insitute PEP8 Validator](https://pep8ci.herokuapp.com/#) - for validating the Python code.
-  * [Shields.io](https://shields.io/) for adding badges to the readme.
-  * [Django Secret Key Generator](https://djecrety.ir/) - for generating a secret key
+  
+- [Django 3.2](https://docs.djangoproject.com/en/3.2/)
+- [Bootstrap 5](https://getbootstrap.com/)
+- [jQuery 3.7.1](https://releases.jquery.com/)
+- [Font Awesome 5.15.4](https://fontawesome.com/)
+- [Google Fonts](https://fonts.google.com/)
+- [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+- [cripsy-bootstrap5](https://github.com/django-crispy-forms/crispy-bootstrap5)
+- [django-allauth](https://django-allauth.readthedocs.io/en/latest/)
+- [django-dynamic-formset](https://github.com/elo80ka/django-dynamic-formset)
+- [django-autoslug](https://django-autoslug.readthedocs.io/en/stable/)
+- [django-taggit](https://django-taggit.readthedocs.io/en/stable/)
+- [coverage](https://coverage.readthedocs.io/en/7.2.7/)
+
+### Tools
+
+- [Git](https://git-scm.com/) - version control
+- [GitHub](https://github.com/) - save and store the files for the app
+- [GitPod](https://gitpod.io/) - developing the app
+- [Heroku](https://heroku.com/) - deploying the app
+- [PostgreSQL](https://www.postgresql.org/) - database
+- [Cloudinary](https://cloudinary.com/) - storing images
+- [Balsamiq](https://balsamiq.com/) - wireframes
+- [Lucid.app](lucid.app) - creating the ERD
+- [Coolors](https://coolors.co/) - colour scheme
+- [Am I Responsive](https://ui.dev/amiresponsive) -responsive screenshots
+- [favicon.io](https://favicon.io/) - custom favicon
+- [FontAwesome](https://fontawesome.com/) - social media icons in footer
+- [ChatGPT](https://chatgpt.com/) - debugging
+- [The W3C Markup Validation Service](https://validator.w3.org/) - validating HTML
+- [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - validating CSS
+- [Code Insitute PEP8 Validator](https://pep8ci.herokuapp.com/#) - validating the Python code
+- [JSHint](https://jshint.com/) - validating JavaScript
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+- [Codebeautify.org](https://codebeautify.org/python-formatter-beautifier) - formatting the code
+- [Shields.io](https://shields.io/) - adding badges to the readme
+- [Django Secret Key Generator](https://djecrety.ir/) - generating a secret key
+
 
 ##  Deployment & Local Development    
-  
 
-  ### Creating a new repository 
-
-    
-  -----  
-
-  ### Deploying to Heroku  
+### Deploying to Heroku  
 
 
   -----
-
-  ### Forking the GitHub Repository
+  
+### Forking the GitHub Repository
 
   A copy of the original repository can be made through GitHub. Please follow the below steps to fork this repository.
 
@@ -222,7 +244,7 @@ For Admin access with relevant sign-in information: [My Cookbook Admin](https://
 
   -----
 
-  ### Clone this GitHub Repository
+  ### Cloning the GitHub Repository
 
   A local clone of this repository can be made on GitHub. Please follow the below steps.
 
@@ -238,8 +260,9 @@ For Admin access with relevant sign-in information: [My Cookbook Admin](https://
   7. Type `git clone` and paste in the copied URL from step 4.
   8. Press '**Enter**' for the local clone to be created.
 
-  </details>
+  </details> 
 
+  
 -----
 
 ## Testing
@@ -282,7 +305,7 @@ For Admin access with relevant sign-in information: [My Cookbook Admin](https://
   </details>
 
 
-  ### Solved Bugs
+  ### Bug Fixes
 
   |Bug|Solution|Fixed?|
   |-----|-----|-----|
@@ -293,7 +316,7 @@ For Admin access with relevant sign-in information: [My Cookbook Admin](https://
 
 ## Credits
 
-  ### Code Used
+  ### Code Inspiration
 
   - 
   
