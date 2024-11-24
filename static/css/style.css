@@ -188,6 +188,10 @@ p {
     color: rgb(222, 146, 168);
 }
 
+.fab {
+    color: var(--white);
+}
+
 @media (min-width: 992px) and (max-width: 1045px) {
     .card-title {
         font-size: calc(1.2rem + .9vw);
