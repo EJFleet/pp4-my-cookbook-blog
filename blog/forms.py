@@ -1,6 +1,8 @@
-from .models import Comment, Recipe
 from django import forms
 from django_summernote.widgets import SummernoteWidget
+from .models import Comment, Recipe
+from django.contrib.auth.models import User
+
 
 class CommentForm(forms.ModelForm):
     class Meta:
@@ -26,3 +28,14 @@ class RecipeForm(forms.ModelForm):
             'method': 'Instructions',
             'featured_image': 'Recipe Image',
         }
+
+
+class RecipeAdminForm(forms.ModelForm):
+    class Meta:
+        model = Recipe
+        fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Filter the author field to only include staff users
+        self.fields['author'].queryset = User.objects.filter(is_staff=True)
