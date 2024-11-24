@@ -45,6 +45,12 @@ p {
     background-color: transparent;
 }
 
+.card-text {
+    height: 6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .card-title {
     height: 5rem;
     overflow: hidden;
@@ -56,10 +62,8 @@ p {
     padding-top: 1rem;
 }
 
-.card-text {
-    height: 6rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.team-jobtitle {
+    height: 4rem;
 }
 
 .team-location {
@@ -72,10 +76,6 @@ p {
     overflow: auto;
 }
 
-.team-job-title {
-    height: 4rem;
-}
-
 .image-container {
     position: relative;
 }
@@ -85,11 +85,6 @@ p {
     height: 20rem;
     object-fit: cover;
 }
-
-/* .recipe-title {
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-} */
 
 .author-draft {
     opacity: 50%;
