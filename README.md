@@ -2,7 +2,7 @@
 
 ## Intro
 
-For my fourth portfolio project, I created a blog app to display recipes to a user. 
+For my fourth portfolio project, I created a blog app to display recipes to a user. The user can log in and leave comments on each recipe and also view a page that displays the team members that work on the blog.
 
 ![My Cookbook responsive screenshot]()
 
@@ -62,9 +62,71 @@ For Admin access with relevant sign-in information: [My Cookbook Admin](https://
 
   ### User Stories
 
-  As a user, I want to:
+  #### Navigation
 
-  *  
+  As a user I can:
+  - use a simple navigation menu so that easily find content.
+  - view the navigation menu on any screen sizes so that navigating the site remains easy on all my devices.
+  - easily find social media links so that I can find and interact with a community of app users.
+
+
+  #### User Account
+
+  As a Site User I can:
+  - sign up for an account so that I can interact with site content by leaving comments.
+  - easily sign in to my account so that I can easily use the site features on return visits.
+  - easily log out of my account so that I can keep my account secure.
+
+  As a Site Admin I can:
+  - delete a User's account so that I can remove any inappropriate accounts.
+
+
+  #### Recipe CRUD
+
+    
+  As a Staff Member I can:
+  - create recipes so that I can share them on the site.
+  - save a recipe as a draft so that I can make changes later.
+  - publish and unpublish recipes so that I can choose whether to share the recipe or not.
+  - update/edit recipes so that I can revise the recipe.
+  - delete recipes so that I can remove the recipe from the site.
+
+
+  #### Site Features
+
+  As a Site User I can:
+  - view a paginated list of recipes so that I can select one to read.
+  - click on a recipe so that I can read the full recipe.
+  - view a list of team members so that I can see who is behind the blog.
+  - search for recipe so that I can find the relevant recipe for my needs.
+
+
+  #### Comment CRUD
+
+  As a Site User I can:
+  - view a list of approved comments by registered users so that I can see tips and opinions on each recipe.
+  
+  As a logged-in Site User I can:
+  - leave comments on a recipe so that I can be involved in the conversation.
+  - see a notification that my comment is waiting for approval so that I know it has been sent.
+  - see my comment displayed just in my view before it has been approved so that I can make any necessary changes.
+  - edit my own comments so that I can correct any mistakes.
+  - delete my own comments so that I can decide whether I want them to be public any more or not.
+
+  As a Site Admin I can:
+  - decide whether to approve or delete a User's comment so that no inappropriate content is displayed on my website.
+
+
+  #### Team Members
+
+  As a Site Admin I can:
+  - create a new Team Member so that I can add a new member of staff as the team grows.
+  - edit a Team Member so that I can keep content relevant if someone's details change.
+  - delete a Team Member so that I can keep content relevant if somebody leaves. 
+
+  
+  
+
 
     #### First-time Visitor Goals
 
