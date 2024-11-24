@@ -6,15 +6,15 @@ For my fourth portfolio project, I created a blog app to display recipes to a us
 
 ![My Cookbook responsive screenshot]()
 
-Visit the deployed site here: [My Cookbook]()
+Visit the deployed site here: [My Cookbook](https://pp4-my-cookbook-blog-1667a6d7fc25.herokuapp.com/)
 
 View My Cookbook on [Github](https://github.com/EJFleet/pp4-my-cookbook-blog)
 
-For Admin access with relevant sign-in information: [My Cookbook Admin]()
+For Admin access with relevant sign-in information: [My Cookbook Admin](https://pp4-my-cookbook-blog-1667a6d7fc25.herokuapp.com/admin/)
 
-![GitHub last commit]()
-![GitHub language count]()
-![GitHub top language]()
+![GitHub last commit](https://img.shields.io/github/last-commit/EJFleet/pp4-my-cookbook-blog)
+![GitHub language count](https://img.shields.io/github/languages/count/EJFleet/pp4-my-cookbook-blog)
+![GitHub top language](https://img.shields.io/github/languages/top/EJFleet/pp4-my-cookbook-blog)
 
 
 ---
