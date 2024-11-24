@@ -24,6 +24,13 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/96811ac200.js" crossorigin="anonymous"></script>
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'favicons/site.webmanifest' %}">
+
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -64,13 +71,13 @@
                     </li>
                     {% endif %}
                     <li class="nav-item"></li>
-                        <a class="nav-link {% if request.path == team_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'team' %}">Meet the Team</a>
+                    <a class="nav-link {% if request.path == team_url %}active{% endif %}" aria-current="page"
+                        href="{% url 'team' %}">Meet the Team</a>
                     </li>
                     {% if user.is_staff %}
                     <li class="nav-item"></li>
-                        <a class="nav-link {% if request.path == add_recipe_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'add_recipe' %}">Add Recipe</a>
+                    <a class="nav-link {% if request.path == add_recipe_url %}active{% endif %}" aria-current="page"
+                        href="{% url 'add_recipe' %}">Add Recipe</a>
                     </li>
                     {% endif %}
                 </ul>
@@ -82,7 +89,8 @@
 
                 <!-- Search Bar -->
                 <form class="d-flex" role="search" method="GET" action="{% url 'home' %}">
-                    <input class="form-control me-2" name='q' type="search" placeholder="Search recipes" aria-label="Search">
+                    <input class="form-control me-2" name='q' type="search" placeholder="Search recipes"
+                        aria-label="Search">
                     <button class="btn btn-primary btn-search" type="submit">Search</button>
                 </form>
 
@@ -125,7 +133,7 @@
             Made by Emma Fleetwood
             {% endblock %}
         </p>
-        <p class="m-0 text-center text-white">Follow My Cookbook: 
+        <p class="m-0 text-center text-white">Follow My Cookbook:
             <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square ms-3"></i></a>
             <a href="https://x.com/home" target="_blank"><i class="fab fa-x-twitter ms-3"></i></a>
             <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square ms-3"></i></a>
