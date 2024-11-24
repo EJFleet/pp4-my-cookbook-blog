@@ -1,3 +1,4 @@
+from django.core.validators import MaxLengthValidator
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField  # from CI
@@ -11,13 +12,17 @@ class Recipe(models.Model):
     A model to create and manage recipes
     """
     title = models.CharField(
-        max_length=200, null=False, blank=False, unique=True
+        max_length=55, null=False, blank=False, unique=True
         )
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="recipe_writer"
         )
-    description = models.CharField(max_length=500, null=False, blank=False)
+    description = models.TextField(
+        null=False, 
+        blank=False, 
+        validators=[MaxLengthValidator(500)]
+    )
     posted_date = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
@@ -26,10 +31,10 @@ class Recipe(models.Model):
         help_text='Enter how many people your recipes serves.'
         )
     ingredients = models.TextField(
-        max_length=10000, null=False, blank=False, default='Ingredients needed'
+        null=False, blank=False, default='Ingredients needed'
         )
     method = models.TextField(
-        max_length=10000, null=False, blank=False, default='Method needed'
+        null=False, blank=False, default='Method needed'
         )
     featured_image = CloudinaryField('image', default='placeholder')
     
