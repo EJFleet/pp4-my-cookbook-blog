@@ -11,8 +11,7 @@
                 {% for recipe in recipe_list %}
                 <div class="col-md-6 col-lg-4 col-xl-3">
                     <div class="card mb-4">
-                        <div
-                            class="card-body {% if recipe.status == 0 and user.is_staff %} author-draft{% endif %}">
+                        <div class="card-body {% if recipe.status == 0 and user.is_staff %} author-draft{% endif %}">
                             <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link">
                                 <div class="image-container">
                                     {% if "placeholder" in recipe.featured_image.url %}
@@ -40,8 +39,20 @@
                 </div>
 
                 {% empty %}
+                <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3">
 
-                <h2 class="zero-results">0 results for "{{ query }}"</h2>
+                    <h2 class="zero-results ms-4 mb-3">0 results for "{{ query }}"</h2>
+                </div>
+                <div>
+                    <h3 class="ms-4 mb-2">Try Again:</h3>
+                </div>
+                <div>
+                    <form class="d-flex ms-4 col-md-6 col-xl-4" role="search" method="GET" action="{% url 'home' %}">
+                        <input class="form-control me-2" name='q' type="search" placeholder="Search recipes"
+                            aria-label="Search">
+                        <button class="btn btn-primary btn-search" type="submit">Search</button>
+                    </form>
+                </div>
                 {% endfor %}
 
             </div>
