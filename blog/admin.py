@@ -1,8 +1,7 @@
 from django.contrib import admin
+from django_summernote.admin import SummernoteModelAdmin
 from .models import Recipe, Comment
 from .forms import RecipeAdminForm
-from django_summernote.admin import SummernoteModelAdmin
-
 @admin.register(Recipe)
 class RecipeAdmin(SummernoteModelAdmin):
     form = RecipeAdminForm
