@@ -2,9 +2,9 @@
 
 ## Intro
 
-For my fourth portfolio project, I created a blog app to display recipes to a user. My Cookbook is a recipe-sharing blog that allows users to browse, search, and interact with recipes. The app is designed for food enthusiasts who want to explore new recipes and connect with a community.
+For my fourth portfolio project, I created a blog app to display recipes to a user.  As a private chef, I often get asked by clients to share my recipes with them.  My Cookbook facilitates this as a recipe-sharing app that allows users to browse, search, and interact with recipes - without having to scroll through a lot of text first.
 
-![My Cookbook responsive screenshot]()
+![My Cookbook responsive screenshot](docs/images/am-i-responsive.png)
 
 Visit the deployed site here: [My Cookbook](https://pp4-my-cookbook-blog-1667a6d7fc25.herokuapp.com/)
 
