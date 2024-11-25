@@ -146,15 +146,28 @@ The database design for this project consists of the following models:
 
 ##### Entity Relationship Diagram (ERD)
 
+### Database Evolution
 
-Below is the ERD that illustrates the relationships between the models:
+The initial Entity Relationship Diagram (ERD) was created during the planning phase to represent the anticipated relationships between the models. However, as development progressed, certain requirements and challenges emerged that led to changes in the database structure. This is a common aspect of Agile development, allowing flexibility to adapt to new insights.
 
-![Original ERD](docs/images/mycookbook-erd-1.png)
-![Current ERD]()
+<details>
 
-#### Imagery
+<summary> Current ERD  </summary>
+  
+![Current ERD](docs/images/current-erd.png)
 
-##### Colour Scheme
+</details>
+
+<details>
+
+<summary> Original ERD </summary>
+
+![Original ERD](docs/images/first-edition-erd.png)
+
+</details>
+
+
+#### Colour Scheme
 
 The colour scheme was chosen to give a fresh, clean look to the app that does not distract from the text and images of the recipes and to provide contrast for good readability of the information. The colour palette was created using [Coolors](https://coolors.co/).
 
@@ -168,14 +181,27 @@ The colour scheme was chosen to give a fresh, clean look to the app that does no
 </details>
 
 
-##### Fonts
+#### Fonts
   
 [Google Fonts](https://fonts.google.com/) was used to add the following fonts:
 
 - 'Roboto' was used to provide a simple, clean and easy to read appearance.
 
 
-  
+#### Imagery
+
+- All images used for the recipes were taken from [BBC Good Food](https://bbcgoodfood.com) and [Recipe Tin Eats](https://recipetineats.com).
+- All images used for the team members were downloaded for free from [Pexels](https://pexels.com)
+
+  <details>
+
+- <summary> Favicon was created using [favicon.io](https://favicon.io) </summary>
+
+    
+  ![Favicon](static/favicons/favicon-32x32.png)
+
+  </details>
+
 
 ## Features
 
