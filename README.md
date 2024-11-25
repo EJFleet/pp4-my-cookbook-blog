@@ -55,6 +55,18 @@ For Admin access with relevant sign-in information: [My Cookbook Admin](https://
 
 ## User Experience (UX)
 
+The user experience (UX) for this project was designed with careful consideration of user needs and project goals, ensuring a seamless, intuitive, and engaging experience for all users. The planning process was informed by Agile methodologies and centered around user stories, categorized into epics to structure development priorities effectively.
+
+<details>
+
+<summary> Epics and User Stories screenshot </summary>
+
+![Epics and User Stories screenshot](docs/images/epics-and-user-stories.png)
+
+</details>
+
+[Link to original document](https://docs.google.com/spreadsheets/d/1zJu0cbOBp-2E82P60fr14d2KqF_FlaW7Y0sWi2PrPls/edit?usp=sharing)
+
   ### User Stories
 
   #### Navigation
@@ -291,6 +303,7 @@ User stories were prioritised using the MoSCoW prioritisation technique. Each us
 - [Codebeautify.org](https://codebeautify.org/python-formatter-beautifier) - formatting the code
 - [Shields.io](https://shields.io/) - adding badges to the readme
 - [Django Secret Key Generator](https://djecrety.ir/) - generating a secret key
+- [Pexels](https://www.pexels.com/) - team member photos
 
 
 ##  Deployment & Local Development    
