@@ -24,7 +24,6 @@ class Recipe(models.Model):
         validators=[MaxLengthValidator(500)]
     )
     posted_date = models.DateTimeField(auto_now_add=True)
-    updated_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
     servings = models.IntegerField(
         null=False, blank=False, default=4,

@@ -8,7 +8,7 @@ from .forms import RecipeAdminForm
 class RecipeAdmin(SummernoteModelAdmin):
     form = RecipeAdminForm
 
-    list_display = ('title', 'slug', 'status')
+    list_display = ('title', 'slug', 'status', 'posted_date')
     search_fields = ['title']
     list_filter = ('status',)
     prepopulated_fields = {'slug': ('title',)}
