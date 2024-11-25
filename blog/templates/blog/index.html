@@ -24,10 +24,10 @@
                                 </div>
                                 {% if recipe.slug %}
                                 <h2 class="card-title text-capitalize mt-2">{{ recipe.title }}</h2>
-                                <p class="card-text">{{ recipe.description|truncatechars:250 }}</p>
+                                <p class="card-text">{{ recipe.description|truncatechars:150 }}</p>
                                 {% else %}
                                 <h2 class="card-title">{{ recipe.title }}</h2>
-                                <p class="card-text">{{ recipe.description|truncatechars:250 }}</p>
+                                <p class="card-text">{{ recipe.description|truncatechars:150 }}</p>
                                 <p class="text-danger">No details available for this recipe.</p>
                                 {% endif %}
                                 <hr />

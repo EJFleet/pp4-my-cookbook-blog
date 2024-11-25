@@ -144,10 +144,38 @@ The Recipe Book app is designed with a simple structure to ensure the app is eas
 
 The wireframes that I originally designed have slightly different aesthetic differences to the finished product. During the construction process, I decided to change the format and layout of some of the features. The original wireframes are below - though the concept evolved, the original layout is still relevant and can be recognised in the finished site.
 
-- [base.html - PC and mobile](docs/wireframes/mycookbook-base-pc-and-smartphone.png)
-- [index.html - PC and mobile - relevant for both the recipe list and the team page](docs/wireframes/mycookbook-index-pc-and-smartphone.png)
-- [recipe_detail.html - PC](docs/wireframes/mycookbook-recipe-detail-pc.png)
-- [recipe_details.html - mobile](docs/wireframes/mycookbook-recipe-detail-smartphone.png)
+<details>
+
+<summary> base.html - desktop and mobile </summary>
+
+![base.html - desktop and mobile](docs/wireframes/mycookbook-base-pc-and-smartphone.png)
+
+</details>
+
+<details>
+
+<summary> index.html - desktop and mobile -relevant for both the recipe list and the team page </summary>
+
+![index.html - PC and mobile](docs/wireframes/mycookbook-index-pc-and-smartphone.png)
+
+</details>
+
+<details>
+
+<summary>recipe_detail.html - desktop</summary>
+
+![recipe_detail.html - desktop](docs/wireframes/mycookbook-recipe-detail-pc.png)
+
+</details>
+
+<details>
+
+<summary>recipe_detail.html - mobile</summary>
+
+![recipe_detail.html - mobile](docs/wireframes/mycookbook-recipe-detail-smartphone.png)
+
+</details>
+
 
 #### Database Design
 
@@ -156,7 +184,6 @@ The database design for this project consists of the following models:
 - **Comment**: Represents comments on recipes.
 - **TeamMember**: Represents staff members contributing to the site.
 
-##### Entity Relationship Diagram (ERD)
 
 ### Database Evolution
 
