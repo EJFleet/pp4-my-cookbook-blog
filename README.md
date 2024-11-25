@@ -122,13 +122,49 @@ For Admin access with relevant sign-in information: [My Cookbook Admin](https://
 
 ### Design
 
-  #### Planning
+#### Structure
+
+The Recipe Book app is designed with a simple structure to ensure the app is easy to use and navigate. Each page has a consistent layout to allow users to easily find the information they need. The app has a responsive design to ensure it can be clearly viewed on a wide range of devices. The navigation menu is available on all pages of the app to provide users with a consistent method to navigate the site. Bootstrap rows and columns have been used to provide a clean and uniform structure to the content of each page.
+
+#### Wireframes
+
+The wireframes that I originally designed have slightly different aesthetic differences to the finished product. During the construction process, I decided to change the format and layout of some of the features. The original wireframes are below - though the concept evolved, the original layout is still relevant and can be recognised in the finished site.
+
+- [base.html - PC and mobile](docs/wireframes/mycookbook-base-pc-and-smartphone.png)
+- [index.html - PC and mobile - relevant for both the recipe list and the team page](docs/wireframes/mycookbook-index-pc-and-smartphone.png)
+- [recipe_detail.html - PC](docs/wireframes/mycookbook-recipe-detail-pc.png)
+- [recipe_details.html - mobile](docs/wireframes/mycookbook-recipe-detail-smartphone.png)
 
   #### Colour Scheme
 
   #### Fonts
 
   #### Imagery
+
+  
+
+
+### Wireframes
+
+- [base.html](docs/wireframes/base.png)
+- [index.html](docs/wireframes/index.png)
+- [browse.html](docs/wireframes/browse.png)
+- [my_recipe_book.html](docs/wireframes/my_recipe_book.png)
+- [create_edit_recipe.html](docs/wireframes/create_edit.png)
+- [recipe_detail.html](docs/wireframes/recipe_detail.png)
+
+### Colour Scheme
+
+![colour palette](docs/images/colour-palette.png)
+
+The colour scheme was chosen to complement the colours in the images without causing distraction and provide contrast for good readability of the information. The colour palette was created using [Coolors](https://coolors.co/).
+
+### Typography
+
+[Google Fonts](https://fonts.google.com/) was used to add the following fonts:
+
+- 'Roboto' was used to provide a simple, clean and easy to read appearance.
+- 'Reenie Beanie' was used as a decorative font for the logo.
 
 
 ## Features
