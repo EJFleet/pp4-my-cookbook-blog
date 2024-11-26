@@ -244,6 +244,147 @@ The colour scheme was chosen to give a fresh, clean look to the app that does no
 
 ## Features
 
+### General Features
+
+#### Navigation Bar
+
+The site features a responsive navigation bar that is consistent across all pages.
+<details>
+
+<summary> Details </summary>
+It includes links to the following pages:
+- Home
+- Register, Login/Logout (based on user authentication status)
+- Meet the Team
+- Add Recipe
+
+It also includes:
+- the app logo
+- the app slogan of 'Recipes for Everyday Living'
+- a search bar 
+
+**Key Features**:
+- Fixed to the top of the screen in all views to allow for easy navigation.
+- Adjusts automatically for different screen sizes.
+- On smaller screens, it collapses into a dropdown toggler for a cleaner and more user-friendly interface.
+
+**Screenshots**:
+![Navigation Bar Desktop View - logged in](docs/images/features/navbar-desktop-logged-in.png)
+![Navigation Bar Mobile View - logged in](docs/images/features/navmenu-mobile-logged-in.png)
+![Navigation Bar Desktop View - logged out](docs/images/features/navbar-desktop-logged-out.png)
+![Navigation Bar Mobile View - logged out](docs/images/features/navbar-mobile-logged-out.png)
+
+</details>
+
+
+---
+
+#### Footer
+The site displays a footer on all pages which is fully responsive at all screen sizes.
+
+<details>
+
+<summary> Details </summary>
+
+It provides quick access to:
+- Copyright information for the site.
+- Social media links (Facebook, X, Instagram, YouTube).
+
+**Key Features**:
+- Social media icons open in a new tab when clicked.
+- The footer is fully responsive and adjusts to fit any screen size.
+
+**Screenshots**:
+![Footer Desktop View](docs/images/features/footer-desktop.png)
+![Footer Mobile View](docs/images/features/footer-mobile.png)
+
+</details>
+
+---
+### Recipe Features
+
+#### Recipe List View
+The recipe list view displays all available recipes in a paginated format. Users can browse through the recipes to find one they are interested in.
+
+<details>
+
+<summary> Details </summary>
+
+**Key Features**:
+- Pagination: Limits the number of recipes displayed per page for better user experience.
+- Each recipe card displays:
+  - Recipe title
+  - Thumbnail image
+  - Short description
+  - Date on which the recipe was posted
+- Clicking on a recipe card redirects the user to the full recipe details page.
+
+**Screenshots**:
+![Recipe List Desktop View - top ](docs/images/features/recipe-list-top-desktop.png)
+![Recipe List Desktop View - bottom](docs/images/features/recipe-list-bottom-desktop.png)
+![Recipe List Mobile View - top](docs/images/features/recipe-list-mobile.png)
+![Recipe List Mobile View - bottom](docs/images/features/recipe-list-bottom-mobile.png)
+
+</details>
+
+---
+
+#### Recipe Details
+The recipe details page provides complete information about a selected recipe.
+
+<details>
+
+<summary> Details </summary>
+
+**Key Features**:
+- Displays:
+  - Recipe title, description, servings, ingredients, and method.
+  - Featured image (or placeholder if no image is provided).
+  - Author and date of creation.
+- Comment section below the recipe.
+- Comment form or a link to log in, depending on user status.
+
+**Screenshots**:
+![Recipe Details Desktop View](docs/screenshots/recipe-details-desktop.png)
+![Recipe Details Mobile View](docs/screenshots/recipe-details-mobile.png)
+
+</details>
+
+---
+
+#### Recipe Management (Admin/Staff Only)
+Staff and admin users can manage recipes directly from the site or the admin panel.
+
+**Key Features**:
+- **Create Recipe**: Staff can create a new recipe with fields for title, description, ingredients, method, servings, and an optional image.
+- **Save as Draft or Publish**: Recipes can be saved as drafts for future editing or published immediately.
+- **Edit Recipe**: Staff can update any aspect of the recipe, including changing its status (draft or published).
+- **Delete Recipe**: Staff can permanently delete a recipe.
+
+**Screenshots**:
+- *Create Recipe Form*: ![Create Recipe Form](docs/screenshots/create-recipe-form.png)
+- *Edit Recipe Form*: ![Edit Recipe Form](docs/screenshots/edit-recipe-form.png)
+
+---
+
+#### Recipe Card Interactivity
+Each recipe card is interactive and acts as a link to the full recipe details page.
+
+**Key Features**:
+- Clicking on a recipe card redirects users to the recipe details page.
+- Cards are responsive and adjust beautifully to various screen sizes.
+
+**Screenshots**:
+![Recipe Card Desktop View](docs/screenshots/recipe-card-desktop.png)
+![Recipe Card Mobile View](docs/screenshots/recipe-card-mobile.png)
+
+---
+
+
+
+
+---
+
   ### Future Implementations
 
   I would add the following features:
