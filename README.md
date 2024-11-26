@@ -225,6 +225,7 @@ The colour scheme was chosen to give a fresh, clean look to the app that does no
 [Google Fonts](https://fonts.google.com/) was used to add the following fonts:
 
 - 'Roboto' was used to provide a simple, clean and easy to read appearance.
+- 'Nixie One' was used to give character to the logo. 
 
 
 #### Imagery
@@ -234,8 +235,7 @@ The colour scheme was chosen to give a fresh, clean look to the app that does no
 
   <details>
 
-- <summary> Favicon was created using [favicon.io](https://favicon.io) </summary>
-
+  <summary>Favicon was created using <a href="https://favicon.io">favicon.io</a></summary>
     
   ![Favicon](static/favicons/favicon-32x32.png)
 
