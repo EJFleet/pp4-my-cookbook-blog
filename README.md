@@ -296,18 +296,20 @@ User stories were prioritised using the MoSCoW prioritisation technique. Each us
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
   ### Frameworks, Libraries & Packages
-
   
-- [Django 4.2](https://docs.djangoproject.com/en/3.2/)
-- [Bootstrap 5](https://getbootstrap.com/)
-- [jQuery 3.7.1](https://releases.jquery.com/)
-- [Font Awesome 5.15.4](https://fontawesome.com/)
-- [Google Fonts](https://fonts.google.com/)
-- [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)
-- [cripsy-bootstrap5](https://github.com/django-crispy-forms/crispy-bootstrap5)
-- [django-allauth](https://django-allauth.readthedocs.io/en/latest/)
-- [django-dynamic-formset](https://github.com/elo80ka/django-dynamic-formset)
-- [django-autoslug](https://django-autoslug.readthedocs.io/en/stable/)
+- [Django 4.2.16](https://docs.djangoproject.com/en/4.2/) - The main web framework used to build the application, creating models, views and templates.
+- [Bootstrap 5](https://getbootstrap.com/) - front-end CSS framework for modern responsiveness and pre-built components
+- [Font Awesome 5.15.4](https://fontawesome.com/) - social media icons in footer
+- [Google Fonts](https://fonts.google.com/) - fonts used on the app
+- [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - enhanced form rendering with customizable styles and better integration with Bootstrap
+- [cripsy-bootstrap5](https://github.com/django-crispy-forms/crispy-bootstrap5) - Bootstrap 5 styling support to `django-crispy-forms`
+- [django-allauth](https://django-allauth.readthedocs.io/en/latest/) - user authentication, registration, and account management
+- [Gunicorn](https://gunicorn.org/) - used for WSGI server
+- [psycopg2](https://pypi.org/project/psycopg2/) - PostgreSQL adapter for Python, used to interact with the PostgreSQL database
+- [django-summernote](https://summernote.org/) - WYSIWYG text editor integrated into Django admin and forms for creating rich-text content
+- [cloudinary 1.36.0](https://cloudinary.com/) - managing and serving images using the Cloudinary API
+- [whitenoise (5.3.0)](https://whitenoise.readthedocs.io/en/latest/) - serving static files in production
+
 
 ### Tools
 
