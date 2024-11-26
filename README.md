@@ -346,12 +346,42 @@ The recipe details page provides complete information about a selected recipe.
 - Comment form or a link to log in, depending on user status.
 
 **Screenshots**:
-![Recipe Details Desktop View](docs/screenshots/recipe-details-desktop.png)
-![Recipe Details Desktop View](docs/screenshots/recipe-details-desktop.png)
-![Recipe Details Desktop View](docs/screenshots/recipe-details-desktop.png)
-![Recipe Details Mobile View](docs/screenshots/recipe-details-mobile.png)
-![Recipe Details Mobile View](docs/screenshots/recipe-details-mobile.png)
-![Recipe Details Mobile View](docs/screenshots/recipe-details-mobile.png)
+
+Anonymous User (Desktop):
+
+![Recipe Detail Desktop View - Anonymous User](docs/images/features/recipe-detail/recipe-detail-desktop-top-not-logged-in.png)
+![Recipe Detail Desktop View - Anonymous User](docs/images/features/recipe-detail/recipe-detail-desktop-middle-not-logged-in.png)
+![Recipe Detail Desktop View - Anonymous User](docs/images/features/recipe-detail/recipe-detail-desktop-bottom-not-logged-in.png)
+
+Logged-in Non-Staff User (Desktop):
+
+![Recipe Detail Desktop View - Non-Staff User](docs/images/features/recipe-detail/recipe-detail-desktop-top-logged-in-non-staff.png)
+![Recipe Detail Desktop View - Non-Staff User](docs/images/features/recipe-detail/recipe-detail-desktop-middle-logged-in-non-staff.png)
+![Recipe Detail Desktop View - Non-Staff User](docs/images/features/recipe-detail/recipe-detail-desktop-bottom-logged-in-non-staff.png)
+
+Logged-in Staff User (Desktop):
+
+![Recipe Detail Desktop View - Staff User](docs/images/features/recipe-detail/recipe-detail-desktop-top.png)
+![Recipe Detail Desktop View - Staff User](docs/images/features/recipe-detail/recipe-detail-desktop-middle.png)
+![Recipe Detail Desktop View - Staff User](docs/images/features/recipe-detail/recipe-detail-desktop-bottom-no-comments-logged-in.png)
+
+Anonymous User (Mobile):
+
+![Recipe Detail Mobile View - Anonymous User](docs/images/features/recipe-detail/recipe-detail-mobile-top-not-logged-in.png)
+![Recipe Detail Mobile View - Anonymous User](docs/images/features/recipe-detail/recipe-detail-mobile-bottom-not-logged-in.png)
+
+Logged-in Non-Staff User (Mobile):
+
+![Recipe Detail Mobile View - Non-Staff User](docs/images/features/recipe-detail/recipe-detail-mobile-top-non-staff.png)
+![Recipe Detail Mobile View - Non-Staff User](docs/images/features/recipe-detail/recipe-detail-mobile-middle-non-staff.png)
+![Recipe Detail Mobile View - Non-Staff User](docs/images/features/recipe-detail/recipe-detail-mobile-bottom-non-staff.png)
+
+Logged-in Staff User (Mobile):
+
+![Recipe Detail Mobile View - Staff User](docs/images/features/recipe-detail/recipe-detail-mobile-top.png)
+![Recipe Detail Mobile View - Staff User](docs/images/features/recipe-detail/recipe-detail-mobile-middle-logged-in.png)
+![Recipe Detail Mobile View - Staff User](docs/images/features/recipe-detail/recipe-detail-mobile-middle-2-logged-in.png)
+![Recipe Detail Mobile View - Staff User](docs/images/features/recipe-detail/recipe-detail-mobile-bottome-logged-in.png)
 
 </details>
 
