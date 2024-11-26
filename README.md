@@ -318,12 +318,20 @@ The recipe list view displays all available recipes in a paginated format. Users
   - Short description
   - Date on which the recipe was posted
 - Clicking on a recipe card redirects the user to the full recipe details page.
+- If a user is not a logged-in Staff user, draft recipes are hidden from display.  Otherwise, drafts are shown with a faded effect.
 
 **Screenshots**:
+
+Desktop:
 ![Recipe List Desktop View - top ](docs/images/features/recipe-list-top-desktop.png)
 ![Recipe List Desktop View - bottom](docs/images/features/recipe-list-bottom-desktop.png)
+
+Mobile:
 ![Recipe List Mobile View - top](docs/images/features/recipe-list-mobile.png)
 ![Recipe List Mobile View - bottom](docs/images/features/recipe-list-bottom-mobile.png)
+
+Example of draft recipe display (2nd from left):
+![Draft recipe](docs/images/features/recipe-list-top-desktop-drafts.png)
 
 </details>
 
@@ -390,28 +398,31 @@ Logged-in Staff User (Mobile):
 #### Recipe Management (Admin/Staff Only)
 Staff and admin users can manage recipes directly from the site or the admin panel.
 
+<details>
+
+<summary> Details </summary>
+
 **Key Features**:
-- **Create Recipe**: Staff can create a new recipe with fields for title, description, ingredients, method, servings, and an optional image.
+- **Create Recipe**: Staff can create a new recipe with fields for title, description, ingredients, method, servings and image.
 - **Save as Draft or Publish**: Recipes can be saved as drafts for future editing or published immediately.
 - **Edit Recipe**: Staff can update any aspect of the recipe, including changing its status (draft or published).
 - **Delete Recipe**: Staff can permanently delete a recipe.
 
 **Screenshots**:
-- *Create Recipe Form*: ![Create Recipe Form](docs/screenshots/create-recipe-form.png)
-- *Edit Recipe Form*: ![Edit Recipe Form](docs/screenshots/edit-recipe-form.png)
 
----
+- Create Recipe Form: 
 
-#### Recipe Card Interactivity
-Each recipe card is interactive and acts as a link to the full recipe details page.
+![Create Recipe Form](docs/images/features/recipe-add-edit/form-recipe-add.png)
+![Create Recipe Form](docs/images/features/recipe-add-edit/form-recipe-add-2.png)
 
-**Key Features**:
-- Clicking on a recipe card redirects users to the recipe details page.
-- Cards are responsive and adjust beautifully to various screen sizes.
+- Edit Recipe Form: 
 
-**Screenshots**:
-![Recipe Card Desktop View](docs/screenshots/recipe-card-desktop.png)
-![Recipe Card Mobile View](docs/screenshots/recipe-card-mobile.png)
+This is the same as the form for creating a recipe, except that it is prepopulated with the recipe details.
+
+![Edit Recipe Form](docs/images/features/recipe-add-edit/edit-recipe-1.png)
+![Edit Recipe Form](docs/images/features/recipe-add-edit/edit-recipe-2.png)
+
+</details>
 
 ---
 
