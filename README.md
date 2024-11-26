@@ -269,10 +269,10 @@ It also includes:
 - On smaller screens, it collapses into a dropdown toggler for a cleaner and more user-friendly interface.
 
 **Screenshots**:
-![Navigation Bar Desktop View - logged in](docs/images/features/navbar-desktop-logged-in.png)
-![Navigation Bar Mobile View - logged in](docs/images/features/navmenu-mobile-logged-in.png)
-![Navigation Bar Desktop View - logged out](docs/images/features/navbar-desktop-logged-out.png)
-![Navigation Bar Mobile View - logged out](docs/images/features/navbar-mobile-logged-out.png)
+![Navigation Bar Desktop View - logged in](docs/images/features/navbar/navbar-desktop-logged-in.png)
+![Navigation Bar Mobile View - logged in](docs/images/features/navbar/navmenu-mobile-logged-in.png)
+![Navigation Bar Desktop View - logged out](docs/images/features/navbar/navbar-desktop-logged-out.png)
+![Navigation Bar Mobile View - logged out](docs/images/features/navbar/navbar-mobile-logged-out.png)
 
 </details>
 
@@ -295,8 +295,8 @@ It provides quick access to:
 - The footer is fully responsive and adjusts to fit any screen size.
 
 **Screenshots**:
-![Footer Desktop View](docs/images/features/footer-desktop.png)
-![Footer Mobile View](docs/images/features/footer-mobile.png)
+![Footer Desktop View](docs/images/features/footer/footer-desktop.png)
+![Footer Mobile View](docs/images/features/footer/footer-mobile.png)
 
 </details>
 
@@ -323,15 +323,15 @@ The recipe list view displays all available recipes in a paginated format. Users
 **Screenshots**:
 
 Desktop:
-![Recipe List Desktop View - top ](docs/images/features/recipe-list-top-desktop.png)
-![Recipe List Desktop View - bottom](docs/images/features/recipe-list-bottom-desktop.png)
+![Recipe List Desktop View - top ](docs/images/features/recipe-list/recipe-list-top-desktop.png)
+![Recipe List Desktop View - bottom](docs/images/features/recipe-list/recipe-list-bottom-desktop.png)
 
 Mobile:
-![Recipe List Mobile View - top](docs/images/features/recipe-list-mobile.png)
-![Recipe List Mobile View - bottom](docs/images/features/recipe-list-bottom-mobile.png)
+![Recipe List Mobile View - top](docs/images/features/recipe-list/recipe-list-mobile.png)
+![Recipe List Mobile View - bottom](docs/images/features/recipe-list/recipe-list-bottom-mobile.png)
 
 Example of draft recipe display (2nd from left):
-![Draft recipe](docs/images/features/recipe-list-top-desktop-drafts.png)
+![Draft recipe](docs/images/features/recipe-list/recipe-list-top-desktop-drafts.png)
 
 </details>
 
@@ -425,8 +425,104 @@ This is the same as the form for creating a recipe, except that it is prepopulat
 </details>
 
 ---
+### Comments Features
+
+#### Comment Section
+Users can view comments left by others under each recipe. The comments section provides a way for users to interact and share their thoughts or tips about the recipe.
+
+<details>
+
+<summary> Details </summary>
+
+**Key Features**:
+
+- Comments are displayed in chronological order (newest first).
+
+**Screenshots**:
+
+Staff member:
+
+![Comments Section Desktop View](docs/images/features/comments/comments-desktop-logged-in-staff.png)
+![Comments Section Mobile View](docs/images/features/comments/comments-mobile-logged-in-staff.png)
+
+Logged-in User (comment author):
+
+![Comments Section Desktop View](docs/images/features/comments/comments-desktop-logged-in-staff.png)
+![Comments Section Mobile View](docs/images/features/comments/comments-mobile-logged-in-user.png)
+
+Logged-in User (not comment author):
+
+![Comments Section Desktop View](docs/images/features/comments/comments-desktop-logged-in-user-not-commenter.png)
+![Comments Section Mobile View](docs/images/features/comments/comments-mobile-logged-in-user-not-commenter.png)
+
+Anonymous User:
+
+![Comments Section Desktop View](docs/images/features/comments/comments-desktop-anon-user.png)
+![Comments Section Mobile View](docs/images/features/comments/comments-mobile-anon-user.png)
 
 
+</details>
+
+---
+
+#### Add a Comment
+Registered users can leave their own comments on recipes to share their feedback or suggestions.
+
+<details>
+
+<summary> Details </summary>
+
+**Key Features**:
+
+- A form allows users to enter their comments.
+- Comments are submitted for admin approval before they become visible to others.
+- The user is notified that their comment has been submitted and is waiting for approval.
+- Pending comments display a notification to the user below the header that their comment is awaiting approval.
+
+**Desktop**:
+
+![Comment Approval Notication](docs/images/features/comments/comment-desktop-submitted-approval.png)
+
+**Mobile**:
+
+![Comment Approval Notication](docs/images/features/comments/comment-mobile-submitted-approval.png)
+
+</details>
+
+---
+
+#### Edit/Delete Comments
+Users have the ability to manage their own comments, while admins have extended privileges to moderate all comments.
+
+<details>
+
+<summary> Details </summary>
+
+**Key Features**:
+
+- **Users**:
+  - Edit their own comments to fix errors or make updates.
+  - Delete their own comments if they no longer want them displayed.
+  - The form for editing comments is the same as the one for adding comments, with the comment populated in the form.
+
+- **Admins**:
+  - Delete comments submitted by any user to ensure content adheres to site guidelines.
+  - Edit comments (Super User only) for minor adjustments if needed.
+  - Approve comments (Super User only) so that only suitable comments are published.
+
+**Desktop**:
+
+![Edit Comment Form](docs/images/features/comments/comments-desktop-update.png)
+
+**Mobile**:
+
+![Edit Comment Form](docs/images/features/comments/comments-mobile-update.png)
+
+
+![Admin Comment Approval](docs/images/features/comments/comments-admin-listview.png)
+![Admin Comment Approval](docs/images/features/comments/comments-admin.png)
+
+<details>
 
 
 ---
