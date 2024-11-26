@@ -38,9 +38,9 @@ For Admin access with relevant sign-in information: [My Cookbook Admin](https://
   * [Tools](#tools)
 
 * [Deployment & Local Development](#deployment--local-development)
-  * [Deploying to Heroku](#deploying-to-heroku)
   * [Forking the GitHub Repository](#forking-the-github-repository)
   * [Cloning the GitHub Repository](#cloning-the-github-repository)
+  * [Deploying to Heroku](#deploying-to-heroku)
 
 * [Testing](#testing)
   * [Functionality](#functionality)
@@ -246,10 +246,14 @@ The colour scheme was chosen to give a fresh, clean look to the app that does no
 
   ### Future Implementations
 
-  I would add features that would allow the user to do the following:
-  *
+  I would add the following features:
+  * Like/remove like from a recipe and view how many likes a recipe had received from other users
+  * Recipe categorisation and tagging to facilitate a more comprehensive search and filter experience
+  * An 'About' page to explain what the site is about and who it is for
+  * Contact Form to make it easier for user's to contact the site admin
+  * A share function for a user to share a recipe on social media
+  * Users can add a recipe to a 'favourites' folder
   
-
 ## Project Management & Agile Methodologies
 
 ### Agile Development
@@ -294,7 +298,7 @@ User stories were prioritised using the MoSCoW prioritisation technique. Each us
   ### Frameworks, Libraries & Packages
 
   
-- [Django 3.2](https://docs.djangoproject.com/en/3.2/)
+- [Django 4.2](https://docs.djangoproject.com/en/3.2/)
 - [Bootstrap 5](https://getbootstrap.com/)
 - [jQuery 3.7.1](https://releases.jquery.com/)
 - [Font Awesome 5.15.4](https://fontawesome.com/)
@@ -304,8 +308,6 @@ User stories were prioritised using the MoSCoW prioritisation technique. Each us
 - [django-allauth](https://django-allauth.readthedocs.io/en/latest/)
 - [django-dynamic-formset](https://github.com/elo80ka/django-dynamic-formset)
 - [django-autoslug](https://django-autoslug.readthedocs.io/en/stable/)
-- [django-taggit](https://django-taggit.readthedocs.io/en/stable/)
-- [coverage](https://coverage.readthedocs.io/en/7.2.7/)
 
 ### Tools
 
@@ -335,10 +337,6 @@ User stories were prioritised using the MoSCoW prioritisation technique. Each us
 
 ##  Deployment & Local Development    
 
-### Deploying to Heroku  
-
-
-  -----
   
 ### Forking the GitHub Repository
 
@@ -372,7 +370,21 @@ User stories were prioritised using the MoSCoW prioritisation technique. Each us
   7. Type `git clone` and paste in the copied URL from step 4.
   8. Press '**Enter**' for the local clone to be created.
 
+  For more details about forking and cloning a repository, please refer to [GitHub documentation](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+
+
   </details> 
+
+  ### Deploying to Heroku
+
+  <details>
+
+  <summary> Deploying to Heroku </summary>
+
+  To get the Django framework installed and set up I followed the Code institutes [Django Blog cheatsheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf)
+
+
+  </details>
 
   
 -----
