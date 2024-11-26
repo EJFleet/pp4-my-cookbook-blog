@@ -342,10 +342,15 @@ The recipe details page provides complete information about a selected recipe.
   - Featured image (or placeholder if no image is provided).
   - Author and date of creation.
 - Comment section below the recipe.
+- Icon showing the comment count on the recipe.
 - Comment form or a link to log in, depending on user status.
 
 **Screenshots**:
 ![Recipe Details Desktop View](docs/screenshots/recipe-details-desktop.png)
+![Recipe Details Desktop View](docs/screenshots/recipe-details-desktop.png)
+![Recipe Details Desktop View](docs/screenshots/recipe-details-desktop.png)
+![Recipe Details Mobile View](docs/screenshots/recipe-details-mobile.png)
+![Recipe Details Mobile View](docs/screenshots/recipe-details-mobile.png)
 ![Recipe Details Mobile View](docs/screenshots/recipe-details-mobile.png)
 
 </details>

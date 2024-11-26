@@ -17,6 +17,17 @@ p {
     padding-bottom: 0rem;
 }
 
+.nav-container {
+    max-width: 1600px;
+}
+
+.custom-message {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: end;
+    padding-right: 20px;
+}
+
 .brand {
     font-family: 'Nixie One', Lato, sans-serif;
     font-size: 1.4rem;
@@ -152,8 +163,12 @@ p {
 }
 
 .link {
-    color: var(--brightgreen);
+    color: var(--darkgreen);
     text-decoration: none;
+}
+
+.comment-count-text {
+    color: var(--grey)
 }
 
 .link:hover,
