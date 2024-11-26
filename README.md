@@ -242,6 +242,8 @@ The colour scheme was chosen to give a fresh, clean look to the app that does no
   </details>
 
 
+---
+
 ## Features
 
 ### General Features
@@ -507,8 +509,8 @@ Users have the ability to manage their own comments, while admins have extended 
 
 - **Admins**:
   - Delete comments submitted by any user to ensure content adheres to site guidelines.
-  - Edit comments (Super User only) for minor adjustments if needed.
-  - Approve comments (Super User only) so that only suitable comments are published.
+  - Edit comments (admin only) for minor adjustments if needed.
+  - Approve comments (admin only) so that only suitable comments are published.
 
 **Desktop**:
 
@@ -518,16 +520,226 @@ Users have the ability to manage their own comments, while admins have extended 
 
 ![Edit Comment Form](docs/images/features/comments/comments-mobile-update.png)
 
+**Admin Comments Panel**:
 
 ![Admin Comment Approval](docs/images/features/comments/comments-admin-listview.png)
+
 ![Admin Comment Approval](docs/images/features/comments/comments-admin.png)
 
+</details>
+
+### **User Account Features**
+
+#### **Registration**
+Users can sign up for an account to access additional features such as leaving comments.
+
 <details>
+
+<summary> Details </summary>
+
+**Key Features**:
+- A registration form with fields for username, email, and password.
+- Password validation to ensure security.
+
+**Screenshots**:
+
+Desktop:
+
+![Registration Form](docs/images/features/user-accounts/accounts-desktop-registration-form.png)
+
+Mobile:
+
+![Registration Form](docs/images/features/user-accounts/accounts-mobile-registration-form.png)
+
+</details>
 
 
 ---
 
-  ### Future Implementations
+#### **Login/Logout**
+
+Users can securely log in and out of their accounts to maintain session integrity.
+
+<details>
+
+<summary> Details </summary>
+
+**Key Features**:
+
+- Login form that authenticates users using their credentials.
+- A logout option available in the navigation bar when logged in.
+- Login status displayed in the top right of the page under the navbar.
+- Success messages displayed upon logging in or logging out.
+
+
+**Screenshots**:
+
+Desktop Login Form:
+
+![Login Form](docs/images/features/user-accounts/accounts-desktop-sign-in-form.png)
+
+Mobile Login Form:
+
+![Login Form](docs/images/features/user-accounts/accounts-mobile-sign-in-form.png)
+
+Desktop Logout Form:
+
+![Logout Form](docs/images/features/user-accounts/accounts-desktop-sign-out.png)
+
+Mobile Logout Form:
+
+![Logout Form](docs/images/features/user-accounts/accounts-mobile-sign-out.png)
+
+Desktop Logged-in Status:
+
+![Login Status](docs/images/features/user-accounts/accounts-desktop-logged-in.png)
+
+Mobile Logged-out Status:
+
+![Logged Out Status](docs/images/features/user-accounts/accounts-mobile-logged-out.png)
+
+Login Confirmation:
+![Login Confirmation](docs/images/features/user-accounts/accounts-desktop-sign-in-confirmation.png)
+
+Logout Confirmation:
+![Logout Confirmation](docs/images/features/user-accounts/accounts-desktop-sign-out-confirmation.png)
+
+
+</details>
+
+---
+
+
+### **Admin/Staff-Specific Features**
+
+#### **Admin Panel**
+Admins can manage the site content directly from the Django admin panel.
+
+<details>
+
+<summary> Details </summary>
+
+**Key Features**:
+- Manage users, recipes, comments, and team members.
+- View and filter data using the admin interface.
+- Bulk actions like deleting multiple comments or recipes.
+
+**Screenshots**:
+![Admin Panel](docs/images/features/user-accounts/admin-panel.png)
+
+</details>
+
+---
+
+#### **Staff Permissions**
+Certain features are restricted to staff or admin users only.
+
+<details>
+
+<summary> Details </summary>
+
+**Key Features**:
+- Only staff can create, edit, and delete recipes.
+- Only admins can approve or delete comments submitted by users.
+- Only admins can add, update or delete a Team Member.
+
+
+</details>
+
+---
+
+### **Team Member Features**
+
+#### **Team Member Page**
+Users can view a dedicated page showcasing the team behind the blog.
+
+<details>
+
+<summary> Details </summary>
+
+**Key Features**:
+- Each team member's profile includes their name, job title, bio, location, and image.
+- Responsive layout that displays team members attractively on all devices.
+- Pagination is applied for easy browsing if there are many team members.
+
+**Screenshots**:
+
+Desktop:
+
+![Team Member Page](docs/images/features/team/team-desktop-top.png)
+![Team Member Page](docs/images/features/team/team-desktop-bottom.png)
+
+Mobile:
+
+![Team Member Page](docs/images/features/team/team-mobile-top.png)
+![Team Member Page](docs/images/features/team/team-mobile-middle.png)
+![Team Member Page](docs/images/features/team/team-mobile-bottom.png)
+
+</details>
+
+---
+
+#### **Manage Team Members**
+Admins can manage team member profiles through the admin panel.
+
+<details>
+
+<summary> Details </summary>
+
+**Key Features**:
+- Add a new team member with all required details.
+- Edit existing team member profiles to keep information up to date.
+- Delete team members no longer part of the blog.
+
+**Screenshots**:
+
+![Manage Team Members](docs/images/features/team/team-team-member-admin-list.png)
+
+![Manage Team Members](docs/images/features/team/team-team-member-admin-member.png)
+
+</details>
+
+---
+
+### **Search & Filtering**
+
+#### **Search Recipes**
+Users can search for recipes by keywords in their title, description, ingredients or method.
+
+<details>
+
+<summary> Details </summary>
+
+**Key Features**:
+- A search box available in the navigation bar on all pages.
+- Results dynamically update based on the search query.
+- Message displays with search box underneath if no results for search query
+
+**Screenshots**:
+
+Search box Desktop:
+
+![Recipe Search](docs/images/features/search/search-navbar.png)
+
+Search box Mobile:
+
+![Recipe Search](docs/images/features/search/search-navbar-mobile.png)
+
+Search results page for 'cake':
+
+![Recipe Search](docs/images/features/search/search-cake.png)
+
+Zero search results:
+
+![Recipe Search](docs/images/features/search/search-zero.png)
+
+
+
+</details>
+
+---
+
+### Future Implementations
 
   I would add the following features:
   * Like/remove like from a recipe and view how many likes a recipe had received from other users
@@ -536,6 +748,8 @@ Users have the ability to manage their own comments, while admins have extended 
   * Contact Form to make it easier for user's to contact the site admin
   * A share function for a user to share a recipe on social media
   * Users can add a recipe to a 'favourites' folder
+
+---
   
 ## Project Management & Agile Methodologies
 
@@ -566,7 +780,7 @@ User stories were prioritised using the MoSCoW prioritisation technique. Each us
 - Could have - to indicate the user story would have a small impact if left out.
 - Won't have - to indicate the user story is not a priority in the current iteration.
 
-
+---
 
 ## Technologies Used
 
