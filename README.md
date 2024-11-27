@@ -790,6 +790,8 @@ Each error page includes:
 - **500 Internal Server Error**
   ![500 Internal Server Error Screenshot](docs/images/features/errors/500-server-error.png)
 
+</details>
+
 ---
 
 ### Future Implementations
@@ -985,16 +987,36 @@ User stories were prioritised using the MoSCoW prioritisation technique. Each us
 
   |Bug|Solution|Fixed?|
   |-----|-----|-----|
-  | |  |  | 
+  |Placeholder images not showing in recipe list | Updated featured_image field in model to have a cloudinary url rather than using a static file. Used python shell to update recipes that were already in database. | Yes | 
+  |Second page of recipes not showing - I had managed to save a recipe without automatically creating a slug - I navigated off the page before saving it properly but it still saved as a draft. | Use the shell to identify and fix recipes missing slugs. Add safeguard in AddRecipe view to make sure slugs are always created. Add a check for a slug in the index.html template to prevent the page breaking if there is no slug| Yes |
+  |Recipe Detail not showing for draft recipes|Update recipe_detail view to include draft recipes if the logged-in user is the author|Yes|
+  |Current image file not displaying in edit_recipe.html|Render each form field separately rather than as one crispy form|Yes|
+  |Team page not showing - KeyError at /team/|Return default queryset for all Team Members and then split the queryset in get_context_data|Yes|
+  |Blank spaces in index.html (draft recipes)|Filter recipes in the backend rather than using css to hide them|Yes|
+  |Admin panel not displaying - slug:slug/ pattern was catching the /admin/ route when it was included at the project-level via path(' ',include('blog.urls'))|Updated app-level urls.py to make the patterns more specific, so they don’t unintentionally catch /admin/ or other URLs - changed to /recipe/slug:slug/ which avoids clashing with /admin/|Yes|
 
 
   **There were no other known bugs at the time of submitting the project.**
 
 ## Credits
 
-  ### Code Inspiration
+  ### Code Credits
 
-  - 
+  
+| Source | Location | Notes |
+| --- | --- | --- |
+|[Code Institute I Think Therefore I Blog walkthrough](https://codeinstitute.net/ie/full-stack-software-development-diploma/) |Entire site | Layout and functionality of team/recipe list and comments |
+|[Django Recipe Sharing Tutorial](https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) | Create, edit and delete recipe, search function | How to add create/edit/delete functionality to recipes  |
+[Recipe Book](https://github.com/VictoriaParkes/recipe-book/blob/main/README.md) |Recipe detail|Layout of recipe detail page|
+|[Using Django Q Objects for Complex Searches](https://www.codu.co/articles/using-q-objects-for-complex-searches-6vk9rl78) | Search functionality  | Using Q to get search results |
+|[W3 Schools - Truncatechars](https://www.w3schools.com/django/ref_filters_truncatechars.php) | index.html | Limit characters displayed in recipe title and description |
+|[How To Scale and Crop Images with CSS object-fit](https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit)|style.css| Make images of different sizes display the same |
+|[Bootstrap Documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/)|Entire site|Responsivity|
+|[Bushy Park README](https://github.com/LewisMDillon/bushy-park-tennis-club-ld/blob/main/README.md?plain=1)|README|Structure of code credit form|
+|[Spicy Recipes](https://github.com/blahosyl/spicy/blob/main/README.md)|Epics and User Stories | Structure and content for epics and user stories |
+|[Recipe Book - Testing](https://github.com/VictoriaParkes/recipe-book/blob/main/docs/testing/functionality-testing.md)|Functionality testing chart | Structure and content for chart |
+|[AI Heroes README](https://github.com/monika-mak/AI-Heroes-PP4/blob/main/README.md?plain=1)|README - Deployment |Section on deploying to Heroku |
+
   
     
   ### Acknowledgments
@@ -1002,4 +1024,5 @@ User stories were prioritised using the MoSCoW prioritisation technique. Each us
   * My mentor Brian Macharia for his help and clear explanations of what needed to be done
   * Lewis Dillon for facilitating our weekly standups and being a font of information and encouragement
   * My friends and family for testing the project on their devices and offering words of encouragement
+  * God for getting me through the tough bits
   * My dog Po for making me take breaks from my desk
