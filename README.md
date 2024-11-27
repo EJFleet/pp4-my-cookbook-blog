@@ -616,6 +616,45 @@ Logout Confirmation:
 
 ---
 
+#### **User Authentication Error Handling**
+
+The application provides comprehensive error handling for user authentication processes, ensuring users receive clear feedback when encountering issues during login or sign-up.
+
+<details>
+
+<summary> Details </summary>
+
+**Key Features**:
+
+- **Incorrect Password on Login**: Users are shown an error message if they enter an incorrect password while trying to log in, ensuring they understand the issue.
+- **Nonexistent Username on Login**: If a user attempts to log in with a username that doesn't exist, they are informed via an error message, maintaining clarity and security.
+- **Non-original Username on Sign Up**: During sign-up, users attempting to register with a username that already exists receive an error message, enforcing unique usernames.
+- **Unmatching Passwords on Sign Up**: The "password" and "confirm password" fields must match during sign-up; otherwise, an error message is displayed.
+- **Too Short Password on Sign Up**: Passwords are validated for minimum length, and users entering too-short passwords are informed with an error message to enhance security.
+- **Invalid Email Address on Sign Up**: The email field checks for valid formatting, ensuring users cannot register with improperly formatted email addresses.
+
+**Screenshots**:
+
+- **Error for Incorrect Password and/or Nonexistent Username on Login**:
+![Error for Incorrect Password](docs/images/features/errors/error-sign-in-password-or-username-wrong.png)
+
+- **Error for Non-original Username on Sign Up**:
+![Error for Non-original Username](docs/images/features/errors/error-signup-same-name.png)
+
+- **Error for Unmatching Passwords on Sign Up**:
+![Error for Unmatching Passwords](docs/images/features/errors/error-signup-password-not-matching.png)
+
+- **Error for Too Short Password on Sign Up**:
+![Error for Too Short Password](docs/images/features/errors/error-signup-password-too-short.png)
+
+- **Error for Invalid Email Address on Sign Up**:
+![Error for Invalid Email](docs/images/features/errors/error-signup-invalid-email.png)
+
+</details>
+
+---
+
+
 
 ### **Admin/Staff-Specific Features**
 
@@ -794,6 +833,7 @@ Each error page includes:
 
 ---
 
+
 ### Future Implementations
 
   I would add the following features:
@@ -840,14 +880,15 @@ User stories were prioritised using the MoSCoW prioritisation technique. Each us
 ## Technologies Used
 
 
-  ### Languages
+### Languages
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/CSS)
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-  ### Frameworks, Libraries & Packages
+
+### Frameworks, Libraries & Packages
   
 - [Django 4.2.16](https://docs.djangoproject.com/en/4.2/) - The main web framework used to build the application, creating models, views and templates.
 - [Bootstrap 5](https://getbootstrap.com/) - front-end CSS framework for modern responsiveness and pre-built components
