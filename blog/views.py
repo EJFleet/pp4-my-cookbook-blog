@@ -79,8 +79,17 @@ class RecipeList(generic.ListView):
 
 def recipe_detail(request, slug):
     """
-    Display details for a specific recipe.
+ Display an individual :model:`blog.Recipe`.
 
+    **Context**
+
+    ``recipe``
+        An instance of :model:`blog.Recipe`.
+
+    **Template:**
+
+    :template:`blog/recipe_detail.html`
+    
     Args:
         request: The HTTP request object.
         slug: The slug of the recipe.
