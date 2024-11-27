@@ -4,6 +4,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
 from django.views.generic import CreateView, DeleteView, UpdateView
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import (
     UserPassesTestMixin, LoginRequiredMixin
 )
@@ -264,6 +265,7 @@ class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return context
 
 
+@login_required
 def comment_edit(request, slug, comment_id):
     """
     View to allow users to edit their own comments.
@@ -299,6 +301,7 @@ def comment_edit(request, slug, comment_id):
     return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
 
+@login_required
 def comment_delete(request, slug, comment_id):
     """
     View to allow users to delete their own comments.
