@@ -100,6 +100,6 @@ Details of manual testing of the functions of each feature of the website. Chrom
 
 | Feature | admin.py | forms.py | models.py | urls.py | views.py | settings.py |
 |---------|----------|----------|-----------|---------|----------|-------------|
-|My Cookbook Main App | na | na | na |[no errors](docs/testing/) | |  |
-|Blog (recipes) | na |  |  | | |
-|Team (team members page)| na | na | | | |
+|My Cookbook Main App | na | na | na |[no errors](/docs/testing/testing-images/my-cookbook/python-my-cookbook-urls.png) |[no errors](/docs/testing/testing-images/my-cookbook/python-my-cookbook-views.png)  |[no errors](/docs/testing/testing-images/my-cookbook/python-mycookbook-settings.png.png)   |
+|Blog (recipes) | [no errors](/docs/testing/testing-images/blog/python-blog-admin.png)   |[no errors](/docs/testing/testing-images/blog/python-blog-forms.png)   |[no errors](/docs/testing/testing-images/blog/python-blog-models.png)  | [no errors](/docs/testing/testing-images/blog/python-blog-urls.png)  |[no errors](/docs/testing/testing-images/blog/python-blog-views.png)   | na |
+|Team (team members page)| [no errors](/docs/testing/testing-images/team/python-team-admin.png)   | na | [no errors](/docs/testing/testing-images/team/python-team-models.png) |[no errors](/docs/testing/testing-images/team/python-team-urls.png)  | [no errors](/docs/testing/testing-images/team/python-team-views.png)   | na |
