@@ -24,6 +24,20 @@ Details of manual testing of the functions of each feature of the website. Chrom
 
 ---
 
+## User Authentication Errors
+
+| Test Label      | Test Action                    | Expected Outcome                                               | Test Outcome |
+|-----------------|--------------------------------|----------------------------------------------------------------|--------------|
+| Wrong Password on Sign In  | Enter an existing username with an incorrect password in the login form and submit. | The form displays an error message. User remains on the login page.  |                  |
+| Nonexistent Username on Sign In  | Enter an non-existent username in the login form and submit. | The form displays an error message. User remains on the login page.  |                  |
+| Non-original Username on Sign Up | Attempt to sign up with a username that already exists in the database.                                  | The form displays an error message. User is not signed up. |                  |
+| Unmatching Passwords on Sign Up | Enter mismatched passwords in the password and confirm password fields of the sign-up form and submit.      | The form displays an error message. User is not signed up.                 |                  |
+| Too Short Password on Sign Up    | Enter a password that is shorter than the minimum required length in the sign-up form and submit.           | The form displays an error message. User is not signed up.                  |                  |
+| Invalid Email Address on Sign Up | Enter an invalid email address (e.g., missing '@') in the email field of the sign-up form and submit.        | The form displays an error message. User is not signed up.            |                  |
+
+
+---
+
 ## Recipe Management
 
 | Test Label                         | Test Action                                                                                 | Expected Outcome                                                                 | Test Outcome |
