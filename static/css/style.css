@@ -6,7 +6,7 @@
     --white: #F9FAFC;
     --grey: #4A4A4F;
     --brightgreen: #32cd32;
-    --danger: #E84610;
+    --danger: #c50909;
 }
 
 /* =======================
@@ -167,6 +167,10 @@ p {
     height: auto;
 }
 
+.recipe-date {
+    color: var(--grey)
+}
+
 /* =======================
    Recipe Display
    ======================= */
@@ -231,7 +235,7 @@ p {
    ======================= */
 
 .errorlist {
-    color: rgb(197, 9, 9);
+    color: var(--danger);
 }
 
 /* =======================
