@@ -424,6 +424,13 @@ This is the same as the form for creating a recipe, except that it is prepopulat
 ![Edit Recipe Form](docs/images/features/recipe-add-edit/edit-recipe-1.png)
 ![Edit Recipe Form](docs/images/features/recipe-add-edit/edit-recipe-2.png)
 
+- Delete Recipe Confirmation:
+
+Before a staff/admin user deletes a recipe, a confirmation page is displayed with the option to continue with deletion or to cancel the action, which will take them back to the recipe page.
+
+![Delete Recipe Confirmation](docs/images/features/recipe-detail/recipe-delete-confirmation.png)
+
+
 </details>
 
 ---
@@ -625,6 +632,7 @@ Admins can manage the site content directly from the Django admin panel.
 - Bulk actions like deleting multiple comments or recipes.
 
 **Screenshots**:
+
 ![Admin Panel](docs/images/features/user-accounts/admin-panel.png)
 
 </details>
@@ -867,7 +875,7 @@ User stories were prioritised using the MoSCoW prioritisation technique. Each us
 - [Am I Responsive](https://ui.dev/amiresponsive) -responsive screenshots
 - [favicon.io](https://favicon.io/) - custom favicon
 - [FontAwesome](https://fontawesome.com/) - social media icons in footer
-- [ChatGPT](https://chatgpt.com/) - debugging
+- [ChatGPT](https://chatgpt.com/) - debugging and formatting
 - [The W3C Markup Validation Service](https://validator.w3.org/) - validating HTML
 - [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - validating CSS
 - [Code Insitute PEP8 Validator](https://pep8ci.herokuapp.com/#) - validating the Python code

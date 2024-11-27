@@ -1,4 +1,7 @@
-:root {
+/* =======================
+   Root Variables
+   ======================= */
+   :root {
     --darkgreen: #006400;
     --white: #F9FAFC;
     --grey: #4A4A4F;
@@ -6,6 +9,9 @@
     --danger: #E84610;
 }
 
+/* =======================
+   Global Styles
+   ======================= */
 body {
     background-color: var(--white);
     font-family: 'Roboto', sans-serif;
@@ -17,24 +23,9 @@ p {
     padding-bottom: 0rem;
 }
 
-.nav-container {
-    max-width: 1600px;
-}
-
-.custom-message {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: end;
-    padding-right: 20px;
-}
-
-.brand {
-    font-family: 'Nixie One', Lato, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--grey);
-}
-
+/* =======================
+   Background Colors
+   ======================= */
 .light-bg {
     background-color: var(--white);
 }
@@ -47,73 +38,18 @@ p {
     background-color: var(--white);
 }
 
-#slogan {
-    margin-right: 3rem;
+/* =======================
+   Links
+   ======================= */
+.link {
+    color: var(--darkgreen);
+    text-decoration: none;
 }
 
-.card {
-    border: none;
-    background-color: transparent;
-}
-
-.card-text {
-    height: 6rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.card-title {
-    height: 5rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.team-card-title {
-    height: 3rem;
-    padding-top: 1rem;
-}
-
-.team-jobtitle {
-    height: 4rem;
-}
-
-.team-location {
-    height: 2rem;
+.link:hover,
+.link:active {
     color: var(--grey);
-}
-
-.team-bio {
-    height: 8rem;
-    overflow: auto;
-}
-
-.image-container {
-    position: relative;
-}
-
-.card-img-top {
-    width: 100%;
-    height: 20rem;
-    object-fit: cover;
-}
-
-.author-draft {
-    opacity: 50%;
-}
-
-.nonauthor-draft {
-    display: none;
-}
-
-.scale {
-    width: 100%;
-    height: auto;
-}
-
-.author {
-    color: var(--white);
-    margin: 4px;
-    text-transform: uppercase;
+    text-decoration: underline;
 }
 
 .post-link {
@@ -126,11 +62,9 @@ p {
     color: var(--danger);
 }
 
-.recipe-subtitle {
-    color: var(--grey);
-}
-
-
+/* =======================
+   Buttons
+   ======================= */
 .btn-signup,
 .btn-edit,
 .btn-search,
@@ -147,7 +81,7 @@ p {
 .btn-search:active,
 .btn-publish:hover,
 .btn-publish:active {
-    background-color:var(--white);
+    background-color: var(--white);
     color: var(--darkgreen);
 }
 
@@ -160,21 +94,6 @@ p {
 .btn-home:active {
     background-color: var(--white) !important;
     color: var(--darkgreen) !important;
-}
-
-.link {
-    color: var(--darkgreen);
-    text-decoration: none;
-}
-
-.comment-count-text {
-    color: var(--grey)
-}
-
-.link:hover,
-.link:active {
-    color: var(--grey);
-    text-decoration: underline;
 }
 
 .btn-delete-recipe,
@@ -195,6 +114,87 @@ p {
     border: none;
 }
 
+/* =======================
+   Navigation
+   ======================= */
+.nav-container {
+    max-width: 1600px;
+}
+
+.brand {
+    font-family: 'Nixie One', Lato, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--grey);
+}
+
+#slogan {
+    margin-right: 3rem;
+}
+
+/* =======================
+   Generic Post Display
+   ======================= */
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+.card-text {
+    height: 6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-title {
+    height: 5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.image-container {
+    position: relative;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.scale {
+    width: 100%;
+    height: auto;
+}
+
+/* =======================
+   Recipe Display
+   ======================= */
+.author {
+    color: var(--white);
+    margin: 4px;
+    text-transform: uppercase;
+}
+
+.author-draft {
+    opacity: 50%;
+}
+
+.nonauthor-draft {
+    display: none;
+}
+
+.recipe-subtitle {
+    color: var(--grey);
+}
+
+/* =======================
+   Comment Display
+   ======================= */
+.comment-count-text {
+    color: var(--grey);
+}
+
 .faded {
     color: rgb(172, 175, 175);
 }
@@ -203,10 +203,38 @@ p {
     color: rgb(222, 146, 168);
 }
 
+/* =======================
+   Team Page
+   ======================= */
+.team-card-title {
+    height: 3rem;
+    padding-top: 1rem;
+}
+
+.team-jobtitle {
+    height: 4rem;
+}
+
+.team-location {
+    height: 2rem;
+    color: var(--grey);
+}
+
+.team-bio {
+    height: 8rem;
+    overflow: auto;
+}
+
+/* =======================
+   Footer
+   ======================= */
 .fab {
     color: var(--white);
 }
 
+/* =======================
+   Media Queries
+   ======================= */
 @media (min-width: 992px) and (max-width: 1045px) {
     .card-title {
         font-size: calc(1.2rem + .9vw);
