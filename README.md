@@ -1106,6 +1106,7 @@ To get the Django framework installed and set up I followed the Code institutes 
 |[Spicy Recipes](https://github.com/blahosyl/spicy/blob/main/README.md)|Epics and User Stories | Structure and content for epics and user stories |
 |[Recipe Book - Testing](https://github.com/VictoriaParkes/recipe-book/blob/main/docs/testing/functionality-testing.md)|Functionality testing chart | Structure and content for chart |
 |[AI Heroes README](https://github.com/monika-mak/AI-Heroes-PP4/blob/main/README.md?plain=1)|README - Deployment |Section on deploying to Heroku |
+|[Free Fido TESTING](https://github.com/amylour/FreeFido_v2/blob/main/TESTING.md?plain=1)|TESTING - structure of Python validation display |
 
   
     
