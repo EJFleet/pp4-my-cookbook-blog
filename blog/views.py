@@ -1,6 +1,6 @@
 from allauth.account.views import LoginView, LogoutView, SignupView
 from django.db.models import Q
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
 from django.views.generic import CreateView, DeleteView, UpdateView
 from django.contrib import messages
@@ -122,6 +122,8 @@ def recipe_detail(request, slug):
                 request, messages.SUCCESS,
                 'Comment submitted and awaiting approval'
             )
+
+            return redirect('recipe_detail', slug=recipe.slug)
 
     comment_form = CommentForm()
     page_title = recipe.title
