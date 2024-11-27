@@ -18,13 +18,15 @@ class Recipe(models.Model):
         - title: A short, unique title for the recipe.
         - slug: A unique slug for the recipe, used in URLs.
         - author: A foreign key linking the recipe to the User who created it.
-        - description: A brief description of the recipe, validated for a maximum length of 500 characters.
+        - description: A brief description of the recipe, validated for a
+          maximum length of 500 characters.
         - posted_date: The date and time the recipe was initially created.
-        - status: An integer field indicating whether the recipe is in Draft (0) or Published (1) state.
+        - status: An integer field indicating whether the recipe is in
+          Draft (0) or Published (1) state.
         - servings: The number of servings the recipe yields.
         - ingredients: Detailed list of ingredients, saved as plain text.
-        - method: Step-by-step instructions for the recipe, saved as plain text.
-        - featured_image: An optional image for the recipe, stored in Cloudinary.
+        - method: Step-by-step instructions for recipe, saved as plain text.
+        - featured_image: An optional image for recipe, stored in Cloudinary.
 
     Meta:
         - Orders recipes by `-posted_date` (most recent first).
@@ -75,7 +77,8 @@ class Comment(models.Model):
         - author: A foreign key linking the comment to the User who created it.
         - body: The main content of the comment, limited to 3000 characters.
         - created_on: The date and time the comment was created.
-        - approved: A boolean indicating whether the comment has been approved by an admin.
+        - approved: A boolean indicating whether the comment has
+          been approved by an admin.
 
     Meta:
         - Orders comments by `-created_on` (most recent first).
@@ -96,7 +99,9 @@ class Comment(models.Model):
     def __str__(self):
         """
         Return a string representation of a Comment instance,
-        displaying the associated recipe, comment body, author, 
+        displaying the associated recipe, comment body, author,
         and creation date.
         """
-        return f"{self.recipe}: {self.body} by {self.author} | {self.created_on}"
+        return (
+            f"{self.recipe}: {self.body} by {self.author} | {self.created_on}"
+        )

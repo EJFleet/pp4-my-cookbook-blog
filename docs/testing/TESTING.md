@@ -1,10 +1,10 @@
-# Functionality Testing
+## Functionality Testing
 
 Details of manual testing of the functions of each feature of the website. Chrome DevTools was used to test the website on different screen sizes.
 
 ---
 
-## Navigation
+### Navigation
 
 | Test Label            | Test Action                                             | Expected Outcome                                                                 | Test Outcome |
 |-----------------------|--------------------------------------------------------|---------------------------------------------------------------------------------|--------------|
@@ -13,7 +13,7 @@ Details of manual testing of the functions of each feature of the website. Chrom
 
 ---
 
-## Authentication
+### Authentication
 
 | Test Label     | Test Action                              | Expected Outcome                                         | Test Outcome |
 |----------------|------------------------------------------|---------------------------------------------------------|--------------|
@@ -24,7 +24,7 @@ Details of manual testing of the functions of each feature of the website. Chrom
 
 ---
 
-## User Authentication Errors
+### User Authentication Errors
 
 | Test Label      | Test Action                    | Expected Outcome                                               | Test Outcome |
 |-----------------|--------------------------------|----------------------------------------------------------------|--------------|
@@ -38,7 +38,7 @@ Details of manual testing of the functions of each feature of the website. Chrom
 
 ---
 
-## Recipe Management
+### Recipe Management
 
 | Test Label                         | Test Action                                                                                 | Expected Outcome                                                                 | Test Outcome |
 |------------------------------------|--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|--------------|
@@ -55,7 +55,7 @@ Details of manual testing of the functions of each feature of the website. Chrom
 
 ---
 
-## Comments
+### Comments
 
 | Test Label               | Test Action                                                                    | Expected Outcome                                                                 | Test Outcome |
 |--------------------------|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------|--------------|
@@ -66,9 +66,9 @@ Details of manual testing of the functions of each feature of the website. Chrom
 
 ---
 
-## Admin Panel
+### Admin Panel
 
-### Recipe Management
+#### Recipe Management
 
 | Test Label              | Test Action                                            | Expected Outcome                                                                 | Test Outcome |
 |-------------------------|-------------------------------------------------------|---------------------------------------------------------------------------------|--------------|
@@ -76,7 +76,7 @@ Details of manual testing of the functions of each feature of the website. Chrom
 | Recipe management filter| Click options in filter menu on recipe management page in admin panel. | Recipe can be filtered by status choices.                                       |              |
 | Recipe management search| Enter search terms in search bar and click search.    | Recipes can be searched by keywords in title and description.                   |              |
 
-### Comment Management
+#### Comment Management
 
 | Test Label                | Test Action                                                            | Expected Outcome                                                                 | Test Outcome |
 |---------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------------------------|--------------|
@@ -87,8 +87,19 @@ Details of manual testing of the functions of each feature of the website. Chrom
 
 ---
 
-## Social Media Links
+### Social Media Links
 
 | Test Label         | Test Action                           | Expected Outcome                                                    | Test Outcome |
 |--------------------|---------------------------------------|----------------------------------------------------------------------|--------------|
 | Social media links | Click all social media links in the footer. | Appropriate social media platform websites will open in a new tab.   |              |
+
+
+#### Python Validation
+
+[CI Python Linter](https://pep8ci.herokuapp.com/#) was used to validate the Python files that were created or edited by myself. No issues presented and line lengths were double checked. I have included some screenshots with the results below.
+
+| Feature | admin.py | forms.py | models.py | urls.py | views.py |
+|---------|----------|----------|-----------|---------|----------|
+|My Cookbook Main App | na | na | na | | |
+|Blog (recipes) | na |  |  | | |
+|Team (team members page)| na | na | | | |

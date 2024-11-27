@@ -73,7 +73,9 @@ class RecipeList(generic.ListView):
         context = super().get_context_data(**kwargs)
         query = self.request.GET.get('q')
         context['query'] = query
-        context['page_title'] = f"Search Results for '{query}'" if query else "Recipes"
+        context['page_title'] = (
+            f"Search Results for '{query}'" if query else "Recipes"
+        )
 
         return context
 
@@ -90,7 +92,7 @@ def recipe_detail(request, slug):
     **Template:**
 
     :template:`blog/recipe_detail.html`
-    
+
     Args:
         request: The HTTP request object.
         slug: The slug of the recipe.
@@ -160,11 +162,13 @@ class AddRecipe(LoginRequiredMixin, UserPassesTestMixin, CreateView):
         """
         Save the form data for a new recipe.
 
-        Assigns the logged-in user as the author and determines whether the 
+        Assigns the logged-in user as the author and determines whether the
         recipe is saved as a draft or published.
         """
         form.instance.author = self.request.user
-        form.instance.status = 0 if self.request.POST.get('action') == 'draft' else 1
+        form.instance.status = (
+            0 if self.request.POST.get('action') == 'draft' else 1
+        )
 
         if not form.instance.slug:
             # Generate a unique slug if one is not provided
@@ -214,7 +218,9 @@ class EditRecipe(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
         Updates the status based on user input (draft or published).
         """
-        form.instance.status = 0 if self.request.POST.get('action') == 'draft' else 1
+        form.instance.status = (
+            0 if self.request.POST.get('action') == 'draft' else 1
+        )
         return super().form_valid(form)
 
     def get_success_url(self):

@@ -26,7 +26,6 @@ class RecipeForm(forms.ModelForm):
         model = Recipe
         fields = ('title', 'description', 'servings',
                   'ingredients', 'method', 'featured_image')
-        
         labels = {
             'title': 'Recipe Title',
             'description': 'Recipe Description',

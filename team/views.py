@@ -7,7 +7,8 @@ class TeamMemberList(ListView):
     """
     Display the Team Members page.
 
-    This view displays all team members, split into 'owner' and 'team' categories, 
+    This view displays all team members, split into 'owner'
+    and 'team' categories,
     with pagination applied.
     """
     model = TeamMember
@@ -24,7 +25,7 @@ class TeamMemberList(ListView):
     def get_context_data(self, **kwargs):
         """
         Add the owner and team members to the context.
-        
+
         - 'owner': Team members with status=1.
         - 'team': Team members with status=0.
         - 'page_title': The title of the page.
