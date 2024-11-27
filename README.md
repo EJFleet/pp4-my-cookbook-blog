@@ -929,13 +929,44 @@ User stories were prioritised using the MoSCoW prioritisation technique. Each us
 
   </details> 
 
+  
+### Cloudinary API 
+
+Cloudinary provides a cloud hosting solution for media storage. All users uploaded images in the FreeFid project are hosted here.
+
+<details> 
+
+<summary>Details</summary> 
+
+Set up a new account at [Cloudinary](https://cloudinary.com/) and add your Cloudinary API environment variable to your **env.py** and Heroku Config Vars.
+In your project workspace: 
+
+- Add Cloudinary libraries to INSTALLED_APPS in settings.py 
+- In the order: 
+```
+   'cloudinary_storage',  
+   'django.contrib.staticfiles',  
+   'cloudinary',
+```
+- Add to **env.py** and link up with **settings.py**: ```os.environ["CLOUDINARY_URL"]="cloudinary://...."``` 
+- Set Cloudinary as storage for media and static files in settings.py:
+- ```STATIC_URL = '/static/'```
+```
+  STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'  
+  STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]  
+  STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')‌  
+  MEDIA_URL = '/media/'  
+  DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+```
+</details>
+
   ### Deploying to Heroku
 
   <details>
 
   <summary> Deploying to Heroku </summary>
 
-  To get the Django framework installed and set up I followed the Code institutes [Django Blog cheatsheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf)
+  To get the Django framework installed and set up I followed the Code institutes [Django Blog cheatsheet](docs/django-blog-cheatsheet.pdf)
 
 
   </details>
