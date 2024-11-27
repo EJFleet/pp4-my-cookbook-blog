@@ -98,8 +98,8 @@ Details of manual testing of the functions of each feature of the website. Chrom
 
 [CI Python Linter](https://pep8ci.herokuapp.com/#) was used to validate the Python files that were created or edited by myself. No issues presented and line lengths were double checked. I have included some screenshots with the results below.
 
-| Feature | admin.py | forms.py | models.py | urls.py | views.py |
-|---------|----------|----------|-----------|---------|----------|
-|My Cookbook Main App | na | na | na | | |
+| Feature | admin.py | forms.py | models.py | urls.py | views.py | settings.py |
+|---------|----------|----------|-----------|---------|----------|-------------|
+|My Cookbook Main App | na | na | na |[no errors](docs/testing/) | |  |
 |Blog (recipes) | na |  |  | | |
 |Team (team members page)| na | na | | | |
