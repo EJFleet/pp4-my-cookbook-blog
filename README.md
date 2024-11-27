@@ -738,6 +738,51 @@ Zero search results:
 </details>
 
 ---
+### Error Pages
+
+#### Custom Error Pages
+
+The app provides user-friendly custom error pages for HTTP errors including `403 Forbidden`, `404 Not Found`, `405 Method Not Allowed`, and `500 Internal Server Error`. This ensures users are presented with clear and aesthetically pleasing error messages, maintaining a professional look even when something goes wrong.
+
+<details>
+
+<summary> Details </summary>
+
+- **403 Forbidden**:
+  - Displayed when a user attempts to access a restricted page or perform an unauthorized action.
+  - Message: "Access Denied – You do not have permission to view this page."
+  
+- **404 Not Found**:
+  - Displayed when a user tries to access a page that does not exist.
+  - Message: "Oops! Page Not Found – The page you're looking for doesn't exist."
+
+- **405 Method Not Allowed**:
+  - Displayed when a user tries to perform an HTTP method that is not supported by the server for a specific URL.
+  - Message: "Method Not Allowed – This action is not permitted."
+
+- **500 Internal Server Error**:
+  - Displayed when an unexpected error occurs on the server.
+  - Message: "Something Went Wrong – Please try again later."
+
+Each error page includes:
+- A **consistent site layout** to keep users oriented.
+- A **clear message** explaining the error.
+- A **call-to-action link**, the "Go Back to Home" button, to help users navigate back to the main site.
+
+
+- **403 Forbidden**
+  ![403 Forbidden Screenshot](docs/images/features/errors/error-403.png)
+
+- **404 Not Found**
+  ![404 Not Found Screenshot](docs/images/features/errors/error-404.png)
+
+- **405 Method Not Allowed**
+  ![405 Method Not Allowed Screenshot]()
+
+- **500 Internal Server Error**
+  ![500 Internal Server Error Screenshot](docs/images/features/errors/500-server-error.png)
+
+---
 
 ### Future Implementations
 
