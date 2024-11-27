@@ -929,6 +929,23 @@ User stories were prioritised using the MoSCoW prioritisation technique. Each us
 
   </details> 
 
+---
+
+ 
+### Code Institute PostgreSQL Database
+
+<details>
+
+<summary>Details</summary>
+
+1. Create an [Code Institute PostgreSQL](https://dbs.ci-dbs.net/manage/KeeMR5RVAMT6WX8k/) account.
+2. Create a new instance.
+3. Copy the database URL.
+4. Add database to the settings.py-file in Django.
+
+</details>
+
+---
   
 ### Cloudinary API 
 
@@ -960,18 +977,19 @@ In your project workspace:
 ```
 </details>
 
-  ### Deploying to Heroku
+---
 
-  <details>
+### Deploying to Heroku
 
-  <summary> Deploying to Heroku </summary>
+<details>
 
-  To get the Django framework installed and set up I followed the Code institutes [Django Blog cheatsheet](docs/django-blog-cheatsheet.pdf)
+<summary> Deploying to Heroku </summary>
+
+To get the Django framework installed and set up I followed the Code institutes [Django Blog cheatsheet](docs/django-blog-cheatsheet.pdf)
 
 
-  </details>
+</details>
 
-  
 -----
 
 ## Testing
