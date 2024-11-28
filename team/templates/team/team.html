@@ -14,8 +14,7 @@
 
                             <div class="image-container">
                                 {% if "placeholder" in member.headshot.url %}
-                                <img class="card-img-top" src="{% static 'images/default.png' %}"
-                                    alt="placeholder image">
+                                <img class="card-img-top" src="{% static 'images/default.png' %}" alt="placeholder image">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ member.headshot.url }}" alt="{{ member.name }}">
                                 {% endif %}
@@ -24,7 +23,7 @@
                             <h3 class="card-text team-jobtitle">{{ member.jobtitle }}</h3>
                             <h4 class="card-text team-location">{{ member.location }}</h4>
                             <p class="card-text team-bio">{{ member.bio }}</p>
-                            <hr />
+                            <hr>
 
                         </div>
                     </div>
@@ -37,8 +36,7 @@
 
                             <div class="image-container">
                                 {% if "placeholder" in member.headshot.url %}
-                                <img class="card-img-top" src="{% static 'images/default.png' %}"
-                                    alt="placeholder image">
+                                <img class="card-img-top" src="{% static 'images/default.png' %}" alt="placeholder image">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ member.headshot.url }}" alt="{{ member.name }}">
                                 {% endif %}
@@ -47,7 +45,7 @@
                             <h3 class="card-text team-jobtitle">{{ member.jobtitle }}</h3>
                             <h4 class="card-text team-location">{{ member.location }}</h4>
                             <p class="card-text team-bio">{{ member.bio }}</p>
-                            <hr />
+                            <hr>
 
                         </div>
                     </div>
