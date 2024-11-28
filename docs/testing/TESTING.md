@@ -28,12 +28,14 @@ Return back to the [README.md](README.md) file.
 - [Dev Tools/Real World Device Testing](#dev-toolsreal-world-device-testing)
   - [Dev Tools Device Testing](#dev-tools-device-testing)
   - [Real World Device Testing](#real-world-device-testing)
-- [Browser Compatibility](#browser-compatibility)
+  - [Browser Compatibility](#browser-compatibility)
 - [Bug Fixes](#bug-fixes)
 
 ---
+<br>
 
 ## Validation
+---
 
 ### HTML Validation
 
@@ -46,7 +48,15 @@ Due to the usage of Jinja syntax (e.g., `{% extends "base.html" %}` and `{{ form
 3. Copy the complete HTML code and paste it into the [validate by input](https://validator.w3.org/#validate_by_input) option.
 4. Fix any errors or warnings, revalidate, and record results.
 
-![HTML Validation](/docs/testing/testing-images/html-all-clear.png)  
+<details>
+
+<summary> View HTML Validation </summary>
+
+![HTML Validation](/docs/testing/testing-images/html-css-js/html-all-clear.png)
+
+</details>
+
+<br>
 
 All pages passed validation except:
 - **Add/Edit Recipe pages:** Errors due to SummerNote and Django Forms code.
@@ -76,9 +86,15 @@ All pages passed validation except:
 
 I used [JSHint](https://jshint.com/) to validate JavaScript code for the comment section buttons.
 
+<details>
+
+<summary> View JS validation results </summary>
+
 | **Page**              | **Screenshot**                                                     | **Errors** | **Warnings** |
 |-----------------------|--------------------------------------------------------------------|------------|--------------|
 | `recipe_detail.html`  | ![JavaScript Validation](/docs/testing/testing-images/html-css-js/jshint-comments-js.png) | None       | None         |
+
+</details>
 
 ---
 
@@ -98,47 +114,119 @@ The following Python files were validated and found to be error-free.
 
 The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used for validation. External CSS from the Bootstrap CDN was excluded. Minor warnings were related to the use of CSS variables for colors and fonts.
 
+<details>
+
+<summary> View CSS Validation</summary>
+
 ![CSS Validation](/docs/testing/testing-images/html-css-js/css-validation.png)
 
+</details>
+
 ---
+<br>
 
 ## Lighthouse Scores
+---
 
 Lighthouse testing was conducted in Incognito mode for accurate results.
 
+
 ### Desktop
 
-- **Home Page:**  
-  ![Lighthouse Desktop](/docs/testing/testing-images/lighthouse/lighthouse-index-desktop.png)
+<details>
 
-- **Recipe Detail Page:**  
-  ![Lighthouse Desktop](/docs/testing/testing-images/lighthouse/lighthouse-recipe-detail-desktop.png)
+<summary> Home Page (Recipe List) </summary>
 
-- **Team Page:**  
-  ![Lighthouse Desktop](/docs/testing/testing-images/lighthouse/lighthouse-team-desktop.png)
+![Lighthouse Desktop](/docs/testing/testing-images/lighthouse/lighthouse-index-desktop.png)
+
+</details>
+<details>
+
+<summary> Recipe Detail  </summary>
+
+![Lighthouse Desktop](/docs/testing/testing-images/lighthouse/lighthouse-recipe-detail-desktop.png)
+
+</details>
+<details>
+
+<summary> Team Page </summary>
+
+![Lighthouse Desktop](/docs/testing/testing-images/lighthouse/lighthouse-team-desktop.png)
+
+</details>
+
 
 ### Mobile
 
-- **Home Page:**  
-  ![Lighthouse Mobile](/docs/testing/testing-images/lighthouse/lighthouse-index-mobile.png)
+<details>
 
-- **Recipe Detail Page:**  
-  ![Lighthouse Mobile](/docs/testing/testing-images/lighthouse/lighthouse-recipe-detail-mobile.png)
+<summary> Home Page (Recipe List) </summary>
 
-- **Team Page:**  
-  ![Lighthouse Mobile](/docs/testing/testing-images/lighthouse/lighthouse-team-mobile.png)
+![Lighthouse Mobile](/docs/testing/testing-images/lighthouse/lighthouse-index-mobile.png)
 
+</details>
+<details>
+
+<summary> Recipe Detail Page </summary>
+
+![Lighthouse Mobile](/docs/testing/testing-images/lighthouse/lighthouse-recipe-detail-mobile.png)
+
+</details>
+<details>
+
+<summary> Team Page </summary>
+
+![Lighthouse Mobile](/docs/testing/testing-images/lighthouse/lighthouse-team-mobile.png)
+
+</details>
+  
 ---
+<br>
 
 ## Wave Accessibility Evaluation
+---
 
 Using the WAVE Accessibility Tool, I identified minor issues related to color contrast and made changes accordingly.  All pages have no errors with the following exceptions:
 - There are 4 consistent errors across the site due to the logos in the footer - the WAVE Tool registers them as being empty `<a>` tags. 
 - The faded appearance of a pre-approved comment causes contrast issues.  I will explore other ways around this in future development. 
 
-<hr>  
+
+<details>
+<summary> Home Page (Recipe List) </summary>
+
+![Home page](/docs/testing/testing-images/wave/wave-recipe-list-1.png)
+![Home page](/docs/testing/testing-images/wave/wave-recipe-list-2.png)
+
+</details>
+<details>
+
+<summary> Recipe Detail </summary>
+
+![Recipe Detail](/docs/testing/testing-images/wave/wave-recipe-detail-contrast-errors-1.png)
+![Recipe Detail](/docs/testing/testing-images/wave/wave-recipe-detail-contrast-errors-2.png)
+![Recipe Detail](/docs/testing/testing-images/wave/wave-recipe-detail-contrast-errors-3.png)
+
+</details>
+<details>
+
+<summary> Team Page </summary>
+
+![Team page](/docs/testing/testing-images/wave/wave-team.png)
+
+</details>
+<details>
+
+<summary> Add Recipe form </summary>
+
+![Add recipe form](/docs/testing/testing-images/wave/wave-add-recipe.png)
+
+</details>
+
+---
+<br>
 
 ## Functionality Testing
+---
 
 Details of manual testing of the functions of each feature of the website. Chrome DevTools was used to test the website on different screen sizes.
 
@@ -148,8 +236,8 @@ Details of manual testing of the functions of each feature of the website. Chrom
 
 | Test Label            | Test Action                                             | Expected Outcome                                                                 | Test Outcome |
 |-----------------------|--------------------------------------------------------|---------------------------------------------------------------------------------|--------------|
-| Navigation links      | Click all links in navigation menu on each page.       | Each link leads to expected page from any page.                                 |              |
-| Navigation menu responsiveness | Resize the screen below and above 768px wide. | Navigation menu collapses into a toggler on screens lower than 768px wide and expands above 768px. |              |
+| Navigation links      | Click all links in navigation menu on each page.       | Each link leads to expected page from any page.                                 |              PASS|
+| Navigation menu responsiveness | Resize the screen below and above 768px wide. | Navigation menu collapses into a toggler on screens lower than 768px wide and expands above 768px. |      PASS        |
 
 ---
 
@@ -157,10 +245,10 @@ Details of manual testing of the functions of each feature of the website. Chrom
 
 | Test Label     | Test Action                              | Expected Outcome                                         | Test Outcome |
 |----------------|------------------------------------------|---------------------------------------------------------|--------------|
-| User login     | Log in as registered user.              | User is logged in.                                      |              |
-| User sign up   | Submit sign-up form with required input. | User object created in database.                       |              |
-| User log out   | Log out authenticated user.             | User is logged out.                                     |              |
-| Admin login    | Log in to admin panel with superuser details. | Login successful, user panel accessed.             |              |
+| User login     | Log in as registered user.              | User is logged in.                                      |    PASS          |
+| User sign up   | Submit sign-up form with required input. | User object created in database.                       |      PASS        |
+| User log out   | Log out authenticated user.             | User is logged out.                                     |      PASS        |
+| Admin login    | Log in to admin panel with superuser details. | Login successful, user panel accessed.             |     PASS         |
 
 ---
 
@@ -168,13 +256,12 @@ Details of manual testing of the functions of each feature of the website. Chrom
 
 | Test Label      | Test Action                    | Expected Outcome                                               | Test Outcome |
 |-----------------|--------------------------------|----------------------------------------------------------------|--------------|
-| Wrong Password on Sign In  | Enter an existing username with an incorrect password in the login form and submit. | The form displays an error message. User remains on the login page.  |                  |
-| Nonexistent Username on Sign In  | Enter an non-existent username in the login form and submit. | The form displays an error message. User remains on the login page.  |                  |
-| Non-original Username on Sign Up | Attempt to sign up with a username that already exists in the database.                                  | The form displays an error message. User is not signed up. |                  |
-| Unmatching Passwords on Sign Up | Enter mismatched passwords in the password and confirm password fields of the sign-up form and submit.      | The form displays an error message. User is not signed up.                 |                  |
-| Too Short Password on Sign Up    | Enter a password that is shorter than the minimum required length in the sign-up form and submit.           | The form displays an error message. User is not signed up.                  |                  |
-| Invalid Email Address on Sign Up | Enter an invalid email address (e.g., missing '@') in the email field of the sign-up form and submit.        | The form displays an error message. User is not signed up.            |                  |
-
+| Wrong Password on Sign In  | Enter an existing username with an incorrect password in the login form and submit. | The form displays an error message. User remains on the login page.  |        PASS          |
+| Nonexistent Username on Sign In  | Enter an non-existent username in the login form and submit. | The form displays an error message. User remains on the login page.  |      PASS            |
+| Non-original Username on Sign Up | Attempt to sign up with a username that already exists in the database.                                  | The form displays an error message. User is not signed up. |      PASS            |
+| Unmatching Passwords on Sign Up | Enter mismatched passwords in the password and confirm password fields of the sign-up form and submit.      | The form displays an error message. User is not signed up.                 |       PASS           |
+| Too Short Password on Sign Up    | Enter a password that is shorter than the minimum required length in the sign-up form and submit.           | The form displays an error message. User is not signed up.                  |        PASS          |
+| Invalid Email Address on Sign Up | Enter an invalid email address (e.g., missing '@') in the email field of the sign-up form and submit.        | The form displays an error message. User is not signed up.            |        PASS          |
 
 ---
 
@@ -182,16 +269,16 @@ Details of manual testing of the functions of each feature of the website. Chrom
 
 | Test Label                         | Test Action                                                                                 | Expected Outcome                                                                 | Test Outcome |
 |------------------------------------|--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|--------------|
-| Pagination                         | View list view with more than 8 recipes displayed.                                          | 8 recipes are displayed per page with page links below.                         |              |
-| Recipe cards as links              | Click recipe cards.                                                                        | Directed to full recipe details.                                               |              |
-| Recipe form required fields        | Click submit button on create recipe form before entering a value for each field.          | Empty fields for title, cooking time, serves, ingredients, and method raise validation error, and form cannot be submitted. |              |
-| Submit recipe for publication      | Submit a recipe with all required inputs and click 'Publish'.                              | Successful form submission, recipe published, recipe object added to database. User redirected to recipe_detail page for new recipe. |              |
-| Submit recipe for draft            | Submit a recipe with all required inputs and click 'Save as Draft'.                        | Successful form submission, recipe object added to database. User redirected to recipe list view. |              |
-| Edit recipe form field population  | Click 'edit' button in recipe when staff member is logged in.                              | Recipe form loads with the fields populated with the data from the recipe being edited. |              |
-| Edit recipes and submit for publication | Click 'edit' button in recipe when staff member is logged in, change data in the fields, and submit form by clicking 'publish' or 'save as draft'. | Successful form submission, recipe object edited in database. User redirected to appropriate page. |              |
-| Delete recipe button               | Click 'delete' button in recipe when staff member is logged in.                            | User is directed to confirm delete page.                                       |              |
-| Confirm delete                     | Click 'delete' button in recipe when staff member is logged in, click 'confirm' button on confirm delete page. | Recipe object is successfully removed from database, the user is redirected to the recipe list view, and a message in displayed confirming successful deletion. |              |
-| Cancel delete                      | Click 'delete' button in recipe when staff member is logged in, click 'cancel' button on deletion confirmation page. | User is returned to full recipe details page and recipe object is not deleted from database. |              |
+| Pagination                         | View list view with more than 8 recipes displayed.                                          | 8 recipes are displayed per page with page links below.                         |     PASS         |
+| Recipe cards as links              | Click recipe cards.                                                                        | Directed to full recipe details.                                               |    PASS          |
+| Recipe form required fields        | Click submit button on create recipe form before entering a value for each field.          | Empty fields for title, cooking time, serves, ingredients, and method raise validation error, and form cannot be submitted. |      PASS        |
+| Submit recipe for publication      | Submit a recipe with all required inputs and click 'Publish'.                              | Successful form submission, recipe published, recipe object added to database. User redirected to recipe_detail page for new recipe. |     PASS         |
+| Submit recipe for draft            | Submit a recipe with all required inputs and click 'Save as Draft'.                        | Successful form submission, recipe object added to database. User redirected to recipe list view. |      PASS        |
+| Edit recipe form field population  | Click 'edit' button in recipe when staff member is logged in.                              | Recipe form loads with the fields populated with the data from the recipe being edited. |      PASS        |
+| Edit recipes and submit for publication | Click 'edit' button in recipe when staff member is logged in, change data in the fields, and submit form by clicking 'publish' or 'save as draft'. | Successful form submission, recipe object edited in database. User redirected to appropriate page. |      PASS        |
+| Delete recipe button               | Click 'delete' button in recipe when staff member is logged in.                            | User is directed to confirm delete page.                                       |     PASS         |
+| Confirm delete                     | Click 'delete' button in recipe when staff member is logged in, click 'confirm' button on confirm delete page. | Recipe object is successfully removed from database, the user is redirected to the recipe list view, and a message in displayed confirming successful deletion. |     PASS         |
+| Cancel delete                      | Click 'delete' button in recipe when staff member is logged in, click 'cancel' button on deletion confirmation page. | User is returned to full recipe details page and recipe object is not deleted from database. |     PASS         |
 
 ---
 
@@ -199,10 +286,10 @@ Details of manual testing of the functions of each feature of the website. Chrom
 
 | Test Label               | Test Action                                                                    | Expected Outcome                                                                 | Test Outcome |
 |--------------------------|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------|--------------|
-| Comment form logged in   | View full recipe details as authenticated user.                               | Comment form is displayed under the recipe.                                     |              |
-| Comment form not logged in| View full recipe details as anonymous user.                                   | Comment form is not displayed.                                                 |              |
-| Submit comment           | View full recipe details as authenticated user and submit a comment.          | Comment form successfully submitted and message informing user comment is awaiting approval is displayed. Comment object created in database. |              |
-| View comments            | View full recipe details of recipe with comments.                            | Comments are displayed in the order they were created.                         |              |
+| Comment form logged in   | View full recipe details as authenticated user.                               | Comment form is displayed under the recipe.                                     |   PASS           |
+| Comment form not logged in| View full recipe details as anonymous user.                                   | Comment form is not displayed.                                                 |     PASS         |
+| Submit comment           | View full recipe details as authenticated user and submit a comment.          | Comment form successfully submitted and message informing user comment is awaiting approval is displayed. Comment object created in database. |      PASS        |
+| View comments            | View full recipe details of recipe with comments.                            | Comments are displayed in the order they were created.                         |     PASS         |
 
 ---
 
@@ -212,18 +299,18 @@ Details of manual testing of the functions of each feature of the website. Chrom
 
 | Test Label              | Test Action                                            | Expected Outcome                                                                 | Test Outcome |
 |-------------------------|-------------------------------------------------------|---------------------------------------------------------------------------------|--------------|
-| Recipe management list  | View recipe management page in admin panel.           | Recipe model fields displayed in list include title, slug, author, description, status, servings, ingredients, method, and image field. |              |
-| Recipe management filter| Click options in filter menu on recipe management page in admin panel. | Recipe can be filtered by status choices.                                       |              |
-| Recipe management search| Enter search terms in search bar and click search.    | Recipes can be searched by keywords in title and description.                   |              |
+| Recipe management list  | View recipe management page in admin panel.           | Recipe model fields displayed in list include title, slug, author, description, status, servings, ingredients, method, and image field. |    PASS          |
+| Recipe management filter| Click options in filter menu on recipe management page in admin panel. | Recipe can be filtered by status choices.                                       |      PASS        |
+| Recipe management search| Enter search terms in search bar and click search.    | Recipes can be searched by keywords in title and description.                   |      PASS        |
 
 #### Comment Management
 
 | Test Label                | Test Action                                                            | Expected Outcome                                                                 | Test Outcome |
 |---------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------------------------|--------------|
-| Comment management list   | View comment management page in admin panel.                         | Comment model fields displayed in list include recipe, body, author, created_on.|              |
-| Comment management filter | Click options in filter menu on comment management page in admin panel. | Comments can be filtered by recipe and created_on.                              |              |
-| Comment management approve action | Click checkbox for multiple comments pending approval, select 'approve comments' from action dropdown and click go. | All checked comments approved.                                                  |              |
-| Comment management search | Enter search terms in search bar and click search.                   | Comments can be searched by keywords in body, recipe title, and user name.      |              |
+| Comment management list   | View comment management page in admin panel.                         | Comment model fields displayed in list include recipe, body, author, created_on.|       PASS       |
+| Comment management filter | Click options in filter menu on comment management page in admin panel. | Comments can be filtered by recipe and created_on.                              |      PASS        |
+| Comment management approve action | Click checkbox for multiple comments pending approval, select 'approve comments' from action dropdown and click go. | All checked comments approved.                                                  |     PASS         |
+| Comment management search | Enter search terms in search bar and click search.                   | Comments can be searched by keywords in body, recipe title, and user name.      |    PASS          |
 
 ---
 
@@ -231,53 +318,55 @@ Details of manual testing of the functions of each feature of the website. Chrom
 
 | Test Label         | Test Action                           | Expected Outcome                                                    | Test Outcome |
 |--------------------|---------------------------------------|----------------------------------------------------------------------|--------------|
-| Social media links | Click all social media links in the footer. | Appropriate social media platform websites will open in a new tab.   |              |
+| Social media links | Click all social media links in the footer. | Appropriate social media platform websites will open in a new tab.   |      PASS        |
 
+---
+<br>
 
- 
-### Dev Tools/Real World Device Testing
+## Dev Tools/Real World Device Testing
+---
 
 Responsiveness testing was carried out using Google Dev Tools on the devices detailed within the below table. Responsiveness was evident on all features throughout all tested devices. 
   
+<br>
 
-**Dev Tools Device Testing - all features tested, issues noted below**
+### Dev Tools Device Testing - all features tested, issues noted below
+
 | Device  | Feature    | Issue  | Fix  |
 | ------- | ---------- | ------ |------|
-| iPhone 4 | Messages | Text overlap with 'x' close button, article image squashed | Separate media query created for screens max-width: 350px to cope with iPhone4 320px screen width, message font size reduced, article image size reduced |
-| iPhone12 Pro | All features | No issues | None needed |
-| Samsung Galaxy A51 | All features | No issues | None needed |
-| iPad Pro | All features | No issues | None needed |
+| iPhone SE | Sign Up and Sign in pages | Pages looked cramped | Added margins to Sign Up heading and to sign-up/in button |
+| Nest Hub Max | All features | No issues | None needed |
+| iPad Mini | All features | No issues | None needed |
+| Asus Zenbook Fold | Scroll down | Can't see footer | This is a browser issue and not a responsivity issue |
    
-  
-**Real World Device Testing**
+<br>
+
+### Real World Device Testing
+
 | Device      | Feature    | Issue  | Fix  | 
 | ------------| ---------- | ------ |------|
-| OPPO Reno 8 Lite |   All features    | No issues | None needed |
-| iPhone XR | All features |  No issues  | None needed |
-| iPhone 12  | All features | No issues | None needed |
+| Samsung S9 | Team Page | Scroll bar on team member bio | Separate media queries created for screens max-width: 400px and 300px to cope with smaller screens (bio font size reduced) |
+| iPad Pro (2020) | All features |  No issues  | None needed |
+| HP 15S laptop  | All features | No issues | None needed |
 | iPad Pro 2021 |    All features      |    No issues    |  None needed |
-| Acer Aspire 3 2019 laptop | All features | No issues | None needed |
+| Google Pixel 6 | All features | No issues | None needed |
+| Samsung S22 | All features | No issues | None needed |
 
 
 ### Browser Compatibility
 
-My Cookbook was tested on the following browsers, new users were created, old users data edited and all features were tested:
+My Cookbook was tested on the following browsers - new users were created, recipes/comments added and updated/deleted and all features were tested.  No issues were found.
 
-- Chrome v
-- Firefox v
-- Edge v
-- Safari v
+- Chrome v 131.0.6778.86 
+- Firefox v 133.0
+- Edge v 129.0.2792.89
+- Safari v17.6 
 
-| Browser | Issue | Functionality |
-|---------|-------|---------------|
-| FireFox | Profile Edit/Upload Image - File input 'Browse' Button centered in input field | Button works as expected |
-| FireFox | Profile Dashboard - scrollbars following Mozilla styling | No issue |
-| Safari  | Scrollbars following Safari styling | No issue |
-
-<hr>
-
+---
+<br>
 
 ## Bug Fixes
+---
 
 |Bug|Solution|Fixed?|
 |-----|-----|-----|
