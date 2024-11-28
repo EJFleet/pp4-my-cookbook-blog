@@ -193,6 +193,14 @@ p {
 }
 
 /* =======================
+   Add/Edit Recipe Form
+   ======================= */
+
+#hint_id_servings {
+    color: var(--grey);
+}
+
+/* =======================
    Comment Display
    ======================= */
 .comment-count-text {
