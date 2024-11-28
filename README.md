@@ -42,11 +42,6 @@ For Admin access with relevant sign-in information: [My Cookbook Admin](https://
   * [Cloning the GitHub Repository](#cloning-the-github-repository)
   * [Deploying to Heroku](#deploying-to-heroku)
 
-* [Testing](#testing)
-  * [Functionality](#functionality)
-  * [Code Validation](#code-validation)
-  * [Bug Fixes](#bug-fixes)
-
 * [Credits](#credits)
   * [Code Inspiration](#code-inspiration)
   * [Acknowledgments](#acknowledgments)
@@ -1033,61 +1028,6 @@ To get the Django framework installed and set up I followed the Code institutes 
 
 -----
 
-## Testing
-
-  ### Functionality
-
-  Extensive testing was performed to ensure that the website ran correctly.
-
-    #### Manual Testing
-
-    ![Manual Testing Checklist]()
-
-
-  ### Code Validation
-
-  The code was validated using PEP8 standards to ensure readability and maintainability.
-
-  <details>
-
-  <summary> Validation for  </summary>
-
-  ![ validation]()
-
-  </details>
-
-  <details>
-
-  <summary> Validation for  </summary>
-
-  ![ validation]()
-
-  </details>
-
-  <details>
-
-  <summary> Validation for  </summary>
-
-  ![ validation]()
-
-  </details>
-
-
-  ### Bug Fixes
-
-  |Bug|Solution|Fixed?|
-  |-----|-----|-----|
-  |Placeholder images not showing in recipe list | Updated featured_image field in model to have a cloudinary url rather than using a static file. Used python shell to update recipes that were already in database. | Yes | 
-  |Second page of recipes not showing - I had managed to save a recipe without automatically creating a slug - I navigated off the page before saving it properly but it still saved as a draft. | Use the shell to identify and fix recipes missing slugs. Add safeguard in AddRecipe view to make sure slugs are always created. Add a check for a slug in the index.html template to prevent the page breaking if there is no slug| Yes |
-  |Recipe Detail not showing for draft recipes|Update recipe_detail view to include draft recipes if the logged-in user is the author|Yes|
-  |Current image file not displaying in edit_recipe.html|Render each form field separately rather than as one crispy form|Yes|
-  |Team page not showing - KeyError at /team/|Return default queryset for all Team Members and then split the queryset in get_context_data|Yes|
-  |Blank spaces in index.html (draft recipes)|Filter recipes in the backend rather than using css to hide them|Yes|
-  |Admin panel not displaying - slug:slug/ pattern was catching the /admin/ route when it was included at the project-level via path(' ',include('blog.urls'))|Updated app-level urls.py to make the patterns more specific, so they don’t unintentionally catch /admin/ or other URLs - changed to /recipe/slug:slug/ which avoids clashing with /admin/|Yes|
-
-
-  **There were no other known bugs at the time of submitting the project.**
-
 ## Credits
 
   ### Code Credits
@@ -1106,7 +1046,7 @@ To get the Django framework installed and set up I followed the Code institutes 
 |[Spicy Recipes](https://github.com/blahosyl/spicy/blob/main/README.md)|Epics and User Stories | Structure and content for epics and user stories |
 |[Recipe Book - Testing](https://github.com/VictoriaParkes/recipe-book/blob/main/docs/testing/functionality-testing.md)|Functionality testing chart | Structure and content for chart |
 |[AI Heroes README](https://github.com/monika-mak/AI-Heroes-PP4/blob/main/README.md?plain=1)|README - Deployment |Section on deploying to Heroku |
-|[Free Fido TESTING](https://github.com/amylour/FreeFido_v2/blob/main/TESTING.md?plain=1)|TESTING - structure of Python validation display |
+|[Free Fido TESTING](https://github.com/amylour/FreeFido_v2/blob/main/TESTING.md?plain=1)|TESTING | structure of Python validation display |
 
   
     
