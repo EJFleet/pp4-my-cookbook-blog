@@ -1,0 +1,53 @@
+[33mcommit 39fbc0329367811ee96333dcc9808b73f37dc24d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Emma-Jane Fleetwood <emmafleetwood@gmail.com>
+Date:   Thu Nov 28 08:05:26 2024 +0000
+
+    Revert changes as caused a bug
+
+[33mcommit cfc4aada1a8367ba146138afb8946f8fdfd555c9[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Emma-Jane Fleetwood <emmafleetwood@gmail.com>
+Date:   Thu Nov 28 07:57:36 2024 +0000
+
+    Change html and js for comment buttons as not passing validation
+
+[33mcommit 31549d6b7d8c58de087bf746fef14aca5ad52422[m
+Author: Emma-Jane Fleetwood <emmafleetwood@gmail.com>
+Date:   Thu Nov 28 07:42:40 2024 +0000
+
+    Minor changes to pass validation
+
+[33mcommit cc9249e81555499b29b3da20b1c2297f177498cc[m
+Author: Emma-Jane Fleetwood <emmafleetwood@gmail.com>
+Date:   Wed Nov 27 17:57:10 2024 +0000
+
+    Update code credit section of readme
+
+[33mcommit c52c827f7b0f09be74ffb7756c855499c2e23181[m
+Author: Emma-Jane Fleetwood <emmafleetwood@gmail.com>
+Date:   Wed Nov 27 17:55:11 2024 +0000
+
+    Add python validating section to testing.md
+
+[33mcommit b45ad73e2d3e2e3eec83c81e3af011b768237b8d[m
+Author: Emma-Jane Fleetwood <emmafleetwood@gmail.com>
+Date:   Wed Nov 27 17:45:40 2024 +0000
+
+    Adjust testing images file structure
+
+[33mcommit ac0acf141b6514d95d9078aded57b42e36f644ff[m
+Author: Emma-Jane Fleetwood <emmafleetwood@gmail.com>
+Date:   Wed Nov 27 17:44:07 2024 +0000
+
+    Rename testing images folder
+
+[33mcommit 34db53bee5dadf8404dcecce5b53bfc085d84ca1[m
+Author: Emma-Jane Fleetwood <emmafleetwood@gmail.com>
+Date:   Wed Nov 27 17:42:22 2024 +0000
+
+    Validate code and upload screenshots
+
+[33mcommit a154ad40cb1f6039ca4a9e29f705ef76bedbb44a[m
+Author: Emma-Jane Fleetwood <emmafleetwood@gmail.com>
+Date:   Wed Nov 27 16:25:05 2024 +0000
+
+    Collect static files
