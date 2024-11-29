@@ -30,7 +30,7 @@ urlpatterns = [
         ),
     path(
         'team/', include('team.urls'), name='team-urls'
-        )
+        ),
 ]
 
 handler404 = 'my_cookbook.views.handler404'

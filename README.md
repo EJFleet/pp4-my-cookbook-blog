@@ -792,19 +792,19 @@ The app provides user-friendly custom error pages for HTTP errors including `403
 
 - **403 Forbidden**:
   - Displayed when a user attempts to access a restricted page or perform an unauthorized action.
-  - Message: "Access Denied – You do not have permission to view this page."
+  - Message: "You are not authorised to perform this action"
   
 - **404 Not Found**:
   - Displayed when a user tries to access a page that does not exist.
-  - Message: "Oops! Page Not Found – The page you're looking for doesn't exist."
+  - Message: "Sorry, the page you are looking for does not exist."
 
 - **405 Method Not Allowed**:
   - Displayed when a user tries to perform an HTTP method that is not supported by the server for a specific URL.
-  - Message: "Method Not Allowed – This action is not permitted."
+  - Message: "The method you are trying to use is not allowed on this page."
 
 - **500 Internal Server Error**:
   - Displayed when an unexpected error occurs on the server.
-  - Message: "Something Went Wrong – Please try again later."
+  - Message: "Oops! Something went wrong on our end. Please try again later."
 
 Each error page includes:
 - A **consistent site layout** to keep users oriented.
@@ -817,9 +817,6 @@ Each error page includes:
 
 - **404 Not Found**
   ![404 Not Found Screenshot](docs/images/features/errors/error-404.png)
-
-- **405 Method Not Allowed**
-  ![405 Method Not Allowed Screenshot]()
 
 - **500 Internal Server Error**
   ![500 Internal Server Error Screenshot](docs/images/features/errors/500-server-error.png)
