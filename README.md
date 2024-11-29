@@ -1034,7 +1034,7 @@ To get the Django framework installed and set up I followed the Code institutes 
 | Source | Location | Notes |
 | --- | --- | --- |
 |[Code Institute I Think Therefore I Blog walkthrough](https://codeinstitute.net/ie/full-stack-software-development-diploma/) |Entire site | Layout and functionality of team/recipe list and comments |
-|[Django Recipe Sharing Tutorial](https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) | Create, edit and delete recipe, search function | How to add create/edit/delete functionality to recipes  |
+|[Django Recipe Sharing Tutorial](https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) | Create, edit and delete recipe, search function | How to add create/edit/delete functionality to recipes and setting up 'debug' so that it is always false when deployed  |
 [Recipe Book](https://github.com/VictoriaParkes/recipe-book/blob/main/README.md) |Recipe detail|Layout of recipe detail page|
 |[Using Django Q Objects for Complex Searches](https://www.codu.co/articles/using-q-objects-for-complex-searches-6vk9rl78) | Search functionality  | Using Q to get search results |
 |[W3 Schools - Truncatechars](https://www.w3schools.com/django/ref_filters_truncatechars.php) | index.html | Limit characters displayed in recipe title and description |
