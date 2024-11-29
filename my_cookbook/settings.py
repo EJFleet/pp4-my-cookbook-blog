@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-ejfleet-pp4mycookbookbl-ty21u2bpw8j.ws.codeinstitute-ide.net',
