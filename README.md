@@ -12,6 +12,8 @@ View My Cookbook on [Github](https://github.com/EJFleet/pp4-my-cookbook-blog)
 
 For Admin access with relevant sign-in information: [My Cookbook Admin](https://pp4-my-cookbook-blog-1667a6d7fc25.herokuapp.com/admin/)
 
+For the details of all testing carried out, please go to [TESTING.MD](docs/testing/TESTING.md)
+
 ![GitHub last commit](https://img.shields.io/github/last-commit/EJFleet/pp4-my-cookbook-blog)
 ![GitHub language count](https://img.shields.io/github/languages/count/EJFleet/pp4-my-cookbook-blog)
 ![GitHub top language](https://img.shields.io/github/languages/top/EJFleet/pp4-my-cookbook-blog)
@@ -1044,7 +1046,8 @@ To get the Django framework installed and set up I followed the Code institutes 
 |[Spicy Recipes](https://github.com/blahosyl/spicy/blob/main/README.md)|Epics and User Stories | Structure and content for epics and user stories |
 |[Recipe Book - Testing](https://github.com/VictoriaParkes/recipe-book/blob/main/docs/testing/functionality-testing.md)|Functionality testing chart | Structure and content for chart |
 |[AI Heroes README](https://github.com/monika-mak/AI-Heroes-PP4/blob/main/README.md?plain=1)|README - Deployment |Section on deploying to Heroku |
-|[Free Fido TESTING](https://github.com/amylour/FreeFido_v2/blob/main/TESTING.md?plain=1)|TESTING | structure of tests |
+|[Free Fido TESTING](https://github.com/amylour/FreeFido_v2/blob/main/TESTING.md?plain=1)|TESTING | Structure of tests |
+|[Keelback Code](https://github.com/keelback-code/wwww/blob/main/w_shop/views.py)| mycookbook/views.py | Views for error messages |
 
     
 ### Acknowledgments
